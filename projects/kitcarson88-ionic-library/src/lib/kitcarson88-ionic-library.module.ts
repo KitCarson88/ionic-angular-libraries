@@ -1,12 +1,37 @@
-import { NgModule } from '@angular/core';
-import { Kitcarson88IonicLibraryComponent } from './kitcarson88-ionic-library.component';
+import { NgModule, ModuleWithProviders, InjectionToken } from '@angular/core';
+import { IonicModule } from '@ionic/angular';
+import { CommonModule } from '@angular/common';
 
+export interface LibConfig {
+  //Add here parameters coming from .forRoot() method
+}
 
+export const LibConfigService = new InjectionToken<LibConfig>('LibConfig');
 
 @NgModule({
-  declarations: [Kitcarson88IonicLibraryComponent],
-  imports: [
+  declarations: [
+    //Declare here components
   ],
-  exports: [Kitcarson88IonicLibraryComponent]
+  imports: [
+    CommonModule,
+    IonicModule
+  ],
+  exports: [
+    //Export here components
+  ]
 })
-export class Kitcarson88IonicLibraryModule { }
+export class Kitcarson88IonicLibraryModule
+{
+  static forRoot(config?: LibConfig): ModuleWithProviders {
+    return {
+      ngModule: Kitcarson88IonicLibraryModule,
+      providers: [
+        //Here provide services
+        {
+          provide: LibConfigService,
+          useValue: config
+        }
+      ]
+    };
+  }
+}
