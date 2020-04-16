@@ -1,0 +1,13 @@
+{
+  "name": "kitcarson88-ionic-library",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular-redux/store": "^10.0.0",
+    "@angular/common": "^9.1.2",
+    "@angular/core": "^9.1.2",
+    "@ionic/angular": "^5.0.7",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "tslib": "^1.10.0"
+  }
+}

@@ -1,0 +1,10 @@
+<div #ref><ng-content></ng-content></div>
+
+<ng-container *ngIf="ref.childNodes.length == 0">
+  <div class="error-container side-padding">
+    <span class="f-18" [innerHtml]="message"></span>
+  </div>
+  <ion-button class="template-button" *ngIf="retryButtonLabel && retryButtonLabel.length" (click)="reload.emit()">
+    <span class="f-18 f-weight-600 f-capitalize">{{retryButtonLabel}}</span>
+  </ion-button>
+</ng-container>
