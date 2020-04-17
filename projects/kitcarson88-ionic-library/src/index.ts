@@ -19,8 +19,8 @@ export * from './lib/store/spinner/spinner.model';
 export * from './lib/store/spinner/spinner.actions';
 export * from './lib/store/spinner/spinner.reducer';
 
-export * from './lib/store/platform-device/platform-device.model';
-export * from './lib/store/platform-device/platform-device.actions';
-export * from './lib/store/platform-device/platform-device.reducer';
+export * from './lib/store/app-platform-device/app-platform-device.model';
+export * from './lib/store/app-platform-device/app-platform-device.actions';
+export * from './lib/store/app-platform-device/app-platform-device.reducer';
 
 export * from './lib/kitcarson88-ionic-library.module';

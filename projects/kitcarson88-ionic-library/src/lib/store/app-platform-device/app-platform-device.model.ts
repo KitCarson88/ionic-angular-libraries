@@ -1,6 +1,8 @@
-export interface PlatformDeviceState
+export interface AppPlatformDeviceState
 {
     infos: {
+        appVersion: string;
+        appBuild: string;
         manufacturer: string;
         model: string;  //a code that identifies device model
         uuid: string;
@@ -9,11 +11,15 @@ export interface PlatformDeviceState
         version: string;    //A device version
         platform: string;   //The os platform
         integration: 'cordova' | 'electron' | 'none';
+        virtual: boolean;
         width: number;
         height: number;
+        freeDiskSpace: number;
+        totalDiskSpace: number;
+        memoryUsage: number;
     };
 };
 
-export const INITIAL_STATE_PLATFORM_DEVICE: PlatformDeviceState = {
+export const INITIAL_STATE_APP_PLATFORM_DEVICE: AppPlatformDeviceState = {
     infos: null
 };
