@@ -1,0 +1,13 @@
+ion-button {
+    --padding-start: var(--padding-left, 0) !important;
+    --padding-end: var(--padding-right, 0) !important;
+    margin-top: var(--margin-top, 0) !important;
+    margin-bottom: var(--margin-bottom, 0) !important;
+    margin-left: var(--margin-left, 0) !important;
+    margin-right: var(--margin-right, 0) !important;
+    --ripple-color: transparent !important;
+    width: var(--width) !important;
+    min-width: var(--min-width) !important;
+    height: var(--height) !important;
+    min-height: var(--min-height) !important;
+}

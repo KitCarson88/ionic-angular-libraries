@@ -14,6 +14,12 @@ export * from './lib/components/ws-data/ws-data.module';
 export * from './lib/components/ws-data-list/ws-data-list.component';
 export * from './lib/components/ws-data-list/ws-data-list.module';
 
+export * from './lib/components/debounce-button/debounce-button.component';
+export * from './lib/components/debounce-button/debounce-button.module';
+
+///////////// Directives
+export * from './lib/directives/debounce-click/debounce-click.directive';
+
 ///////////// Redux
 export * from './lib/store/spinner/spinner.model';
 export * from './lib/store/spinner/spinner.actions';
