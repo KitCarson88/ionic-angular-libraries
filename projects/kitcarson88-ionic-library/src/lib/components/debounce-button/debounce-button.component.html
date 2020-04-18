@@ -1,4 +1,4 @@
-<ion-button debounceClick [ngClass]="cssClass" [@buttonState]="animationState" (click)="animateButton()"
+<ion-button debounceClick [fill]="fill" [disabled]="disabled" [shape]="shape" [ngClass]="cssClass" [@buttonState]="animationState" (click)="animateButton()"
   [debounceTime]="debounce" (debounceClick)="onDebounceClick($event)">
   <ng-content></ng-content>
 </ion-button>

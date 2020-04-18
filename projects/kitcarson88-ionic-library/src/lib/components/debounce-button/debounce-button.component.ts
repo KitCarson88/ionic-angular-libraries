@@ -24,6 +24,15 @@ export class DebounceButtonComponent
   cssClass?: string;
 
   @Input()
+  fill?: 'clear' | 'outline' | 'solid';
+
+  @Input()
+  disabled?: boolean;
+
+  @Input()
+  shape?: 'round';
+
+  @Input()
   debounce?: number;
 
   @Output()
