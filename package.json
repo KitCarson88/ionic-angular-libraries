@@ -6,7 +6,9 @@
     "start": "ng serve",
     "redux-fix": "node ./scripts/redux-missing-symbol-observable-fix.js",
     "copy-styles": "node ./scripts/copy-kitcarson88-ionic-library-styles.js",
-    "build": "npm run redux-fix && ng build && npm run copy-styles",
+    "prebuild": "npm run redux-fix",
+    "build": "ng build",
+    "postbuild": "npm run copy-styles",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
