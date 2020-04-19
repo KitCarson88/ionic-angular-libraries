@@ -33,6 +33,9 @@ export class DebounceButtonComponent
   shape?: 'round';
 
   @Input()
+  color?;
+
+  @Input()
   debounce?: number;
 
   @Output()
