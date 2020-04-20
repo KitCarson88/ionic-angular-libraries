@@ -212,6 +212,11 @@ $ultra-hd-width: "screen and (min-width: 3840px)";      //2160p
     }
 }
 @mixin pixel-2-xl {
+    @media screen and (width: 411px) and (height: 823px)
+    {
+        @content;
+    }
+
     @media screen and (width: 412px) and (height: 823px)
     {
         @content;
