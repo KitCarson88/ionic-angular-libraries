@@ -12,13 +12,8 @@ Run the terminal command inside ionic-5-library folder:
 
 ## Build instructions
 To build internal libraries do a complete ionic-5-library project build.
-The first build must be executed with the command:
-    npm run build   (this executes also scripts into scripts folder)
-Other builds can be executed simply with:
-    ng build
-
-For production build add --prod command:
-    ng build --prod
+To build the project run
+    npm run build
 
 ## Export or link or publish libraries
 To export/link/publish internal libraries follow them own README (an example provided for

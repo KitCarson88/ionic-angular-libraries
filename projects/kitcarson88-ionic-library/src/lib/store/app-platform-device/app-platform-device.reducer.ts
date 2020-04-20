@@ -8,6 +8,8 @@ export function appPlatformDeviceReducer(state: AppPlatformDeviceState = INITIAL
         case AppPlatformDeviceActions.INIT_INFOS:
             return {
                 infos: {
+                    appName: action.payload.appName,
+                    appPackageName: action.payload.appPackageName,
                     appVersion: action.payload.appVersion,
                     appBuild: action.payload.appBuild,
                     manufacturer: action.payload.manufacturer,

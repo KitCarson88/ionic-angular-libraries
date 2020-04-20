@@ -1,6 +1,8 @@
 export interface AppPlatformDeviceState
 {
     infos: {
+        appName: string;
+        appPackageName: string;
         appVersion: string;
         appBuild: string;
         manufacturer: string;

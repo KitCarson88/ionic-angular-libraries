@@ -16,6 +16,8 @@ export class AppPlatformDeviceActions
 
     @dispatch()
     initializeInfos = (options: {
+        appName?: string,
+        appPackageName?: string,
         appVersion?: string,
         appBuild?: string,
         manufacturer?: string,
