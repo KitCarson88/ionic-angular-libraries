@@ -1,8 +1,6 @@
 /*
  * Public API Surface of almaviva-ionic-library
  */
-///////////// Ionic native mocks
-export * from './lib/ionic-native/ionic-mock.providers';
 
 ///////////// Components
 export * from './lib/components/spinner/spinner.component';
@@ -31,5 +29,8 @@ export * from './lib/store/spinner/spinner.reducer';
 export * from './lib/store/app-platform-device/app-platform-device.model';
 export * from './lib/store/app-platform-device/app-platform-device.actions';
 export * from './lib/store/app-platform-device/app-platform-device.reducer';
+
+///////////// Ionic native mocks
+export * from './lib/ionic-native/ionic-mock.providers';
 
 export * from './lib/kitcarson88-ionic-library.module';
