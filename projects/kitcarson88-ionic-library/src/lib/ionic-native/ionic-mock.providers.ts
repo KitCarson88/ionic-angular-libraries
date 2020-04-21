@@ -1,9 +1,11 @@
 import { Injectable, Inject } from '@angular/core';
+import { HttpClient } from "@angular/common/http";
 
 import { LibConfigService, LibConfig } from '../kitcarson88-ionic-library.module';
 
 import { AppVersion } from '@ionic-native/app-version/ngx';
 import { Device } from '@ionic-native/device/ngx';
+import { HTTP } from '@ionic-native/http/ngx';
 import { NativeStorage } from '@ionic-native/native-storage/ngx';
 import { NavigationBar } from '@ionic-native/navigation-bar/ngx';
 import { NativeAudio } from '@ionic-native/native-audio/ngx';
@@ -109,6 +111,57 @@ export class NativeStorageMock
 }
 
 @Injectable()
+export class HTTPMock extends Mock
+{
+    constructor(@Inject(LibConfigService) protected config: LibConfig, private http: HttpClient)
+    {
+        super(config);
+    }
+
+    get(endpoint: string, params?: any, header?: any)
+    {
+        return new Promise(async (resolve, reject) =>
+        {
+            try
+            {
+                let response = await this.http.get(endpoint, { headers: header }).toPromise();
+                resolve({ data: JSON.stringify(response) });
+            }
+            catch (err)
+            {
+                reject(err);
+            }
+        });
+    }
+
+    post(endpoint: string, body?: any, header?: any)
+    {
+        return new Promise(async (resolve, reject) =>
+        {
+            try
+            {
+                let response = await this.http.post(endpoint, body, { headers: header }).toPromise();
+                resolve({ data: JSON.stringify(response) });
+            }
+            catch (err)
+            {
+                reject(err);
+            }
+        });
+    }
+
+    setDataSerializer(): void
+    {
+
+    }
+
+    setRequestTimeout(timeout: number): void
+    {
+        return;
+    }
+}
+
+@Injectable()
 export class NavigationBarMock
 {
     setUp(autohide?): Promise<any>
@@ -176,22 +229,22 @@ export function getAppVersion(): any
 {
     return hasCordova() ? AppVersion : AppVersionMock;
 }
-
 export function getDevice(): any
 {
     return hasCordova() ? Device : DeviceMock;
 }
-
 export function getNativeStorage(): any
 {
     return hasCordova() ? NativeStorage : NativeStorageMock;
 }
-
+export function getHTTP(): any
+{
+    return hasCordova()? HTTP : HTTPMock;
+}
 export function getNavigationBar(): any
 {
     return hasCordova() ? NavigationBar : NavigationBarMock;
 }
-
 export function getNativeAudio(): any
 {
     return hasCordova() ? NativeAudio : NativeAudioMock;

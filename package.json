@@ -27,6 +27,7 @@
     "@ionic-native/app-version": "^5.24.0",
     "@ionic-native/core": "^5.24.0",
     "@ionic-native/device": "^5.24.0",
+    "@ionic-native/http": "^5.24.0",
     "@ionic-native/native-audio": "^5.24.0",
     "@ionic-native/native-storage": "^5.24.0",
     "@ionic-native/navigation-bar": "^5.24.0",
