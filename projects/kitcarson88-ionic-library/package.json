@@ -5,16 +5,18 @@
     "@angular-redux/store": "^10.0.0",
     "@angular/common": "^9.1.2",
     "@angular/core": "^9.1.2",
-    "@ionic-native/app-version": "^5.24.0",
-    "@ionic-native/core": "^5.24.0",
-    "@ionic-native/device": "^5.24.0",
-    "@ionic-native/http": "^5.24.0",
-    "@ionic-native/native-audio": "^5.24.0",
-    "@ionic-native/native-storage": "^5.24.0",
-    "@ionic-native/navigation-bar": "^5.24.0",
     "@ionic/angular": "^5.0.7",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
     "tslib": "^1.10.0"
-  }
+  },
+  "bundledDependencies": [
+    "@ionic-native/app-version",
+    "@ionic-native/core",
+    "@ionic-native/device",
+    "@ionic-native/http",
+    "@ionic-native/native-audio",
+    "@ionic-native/native-storage",
+    "@ionic-native/navigation-bar"
+  ]
 }

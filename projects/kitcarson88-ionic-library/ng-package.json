@@ -5,19 +5,7 @@
     "entryFile": "src/index.ts",
     "umdModuleIds": {
       "@ionic/angular": "@ionic/angular",
-      "@angular-redux/store": "@angular-redux/store",
-      "@ionic-native/app-version": "@ionic-native/app-version",
-      "@ionic-native/app-version/ngx": "@ionic-native/app-version/ngx",
-      "@ionic-native/device": "@ionic-native/device",
-      "@ionic-native/device/ngx": "@ionic-native/device/ngx",
-      "@ionic-native/http": "@ionic-native/http",
-      "@ionic-native/http/ngx": "@ionic-native/http/ngx",
-      "@ionic-native/native-storage": "@ionic-native/native-storage",
-      "@ionic-native/native-storage/ngx": "@ionic-native/native-storage/ngx",
-      "@ionic-native/navigation-bar": "@ionic-native/navigation-bar",
-      "@ionic-native/navigation-bar/ngx": "@ionic-native/navigation-bar/ngx",
-      "@ionic-native/native-audio": "@ionic-native/native-audio",
-      "@ionic-native/native-audio/ngx": "@ionic-native/native-audio/ngx"
+      "@angular-redux/store": "@angular-redux/store"
     }
   }
 }
