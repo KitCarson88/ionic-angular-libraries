@@ -4,6 +4,14 @@ import { CommonModule } from '@angular/common';
 
 export interface LibConfig {
   //Add here parameters coming from .forRoot() method
+  ionicMock?: {
+    appVersion?: {
+      appName?: string,
+      packageName?: string,
+      versionCode?: string | number,
+      versionNumber?: string
+    }
+  }
 }
 
 export const LibConfigService = new InjectionToken<LibConfig>('LibConfig');

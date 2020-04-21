@@ -1,6 +1,9 @@
 /*
  * Public API Surface of almaviva-ionic-library
  */
+///////////// Ionic native mocks
+export * from './lib/ionic-native/ionic-mock.providers';
+
 ///////////// Components
 export * from './lib/components/spinner/spinner.component';
 export * from './lib/components/spinner/spinner.module';

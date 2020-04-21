@@ -5,6 +5,8 @@
     "@angular-redux/store": "^10.0.0",
     "@angular/common": "^9.1.2",
     "@angular/core": "^9.1.2",
+    "@ionic-native/app-version": "^5.24.0",
+    "@ionic-native/core": "^5.24.0",
     "@ionic/angular": "^5.0.7",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
