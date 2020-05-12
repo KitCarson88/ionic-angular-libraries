@@ -17,15 +17,12 @@
     "tslib": "^1.10.0"
   },
   "bundleDependencies": [
-    "@angular-redux/store",
     "@ionic-native/app-version",
     "@ionic-native/core",
     "@ionic-native/device",
     "@ionic-native/http",
     "@ionic-native/native-audio",
     "@ionic-native/native-storage",
-    "@ionic-native/navigation-bar",
-    "@ionic/angular",
-    "redux"
+    "@ionic-native/navigation-bar"
   ]
 }
