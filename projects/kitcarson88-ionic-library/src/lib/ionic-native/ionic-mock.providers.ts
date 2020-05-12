@@ -18,7 +18,7 @@ class Mock
 
     protected isMockAvailable(mock: string)
     {
-        return this.config && this.config.ionicMock && this.config.ionicMock[mock];
+        return this.config && this.config.ionicMock && this.config.ionicMock[ mock ];
     }
 }
 
@@ -27,41 +27,45 @@ export class AppVersionMock extends Mock
 {
     getAppName(): Promise<string>
     {
-        return new Promise((resolve, reject) => {
+        return new Promise((resolve, reject) =>
+        {
             if (this.isMockAvailable('appVersion'))
-                this.config.ionicMock.appVersion.appName? 
-                    resolve(this.config.ionicMock.appVersion.appName) : 
-                    reject('An error occured retrieving appName data from AppVersion mock')
+                this.config.ionicMock.appVersion.appName ?
+                    resolve(this.config.ionicMock.appVersion.appName) :
+                    reject('An error occured retrieving appName data from AppVersion mock');
         });
     }
 
     getPackageName(): Promise<string>
     {
-        return new Promise((resolve, reject) => {
+        return new Promise((resolve, reject) =>
+        {
             if (this.isMockAvailable('appVersion'))
-                this.config.ionicMock.appVersion.packageName? 
-                    resolve(this.config.ionicMock.appVersion.packageName) : 
-                    reject('An error occured retrieving packageName data from AppVersion mock')
+                this.config.ionicMock.appVersion.packageName ?
+                    resolve(this.config.ionicMock.appVersion.packageName) :
+                    reject('An error occured retrieving packageName data from AppVersion mock');
         });
     }
 
     getVersionCode(): Promise<string | number>
     {
-        return new Promise((resolve, reject) => {
+        return new Promise((resolve, reject) =>
+        {
             if (this.isMockAvailable('appVersion'))
-                this.config.ionicMock.appVersion.versionCode? 
-                    resolve(this.config.ionicMock.appVersion.versionCode) : 
-                    reject('An error occured retrieving versionCode data from AppVersion mock')
+                this.config.ionicMock.appVersion.versionCode ?
+                    resolve(this.config.ionicMock.appVersion.versionCode) :
+                    reject('An error occured retrieving versionCode data from AppVersion mock');
         });
     }
 
     getVersionNumber(): Promise<string>
     {
-        return new Promise((resolve, reject) => {
+        return new Promise((resolve, reject) =>
+        {
             if (this.isMockAvailable('appVersion'))
-                this.config.ionicMock.appVersion.versionNumber? 
-                    resolve(this.config.ionicMock.appVersion.versionNumber) : 
-                    reject('An error occured retrieving versionNumber data from AppVersion mock')
+                this.config.ionicMock.appVersion.versionNumber ?
+                    resolve(this.config.ionicMock.appVersion.versionNumber) :
+                    reject('An error occured retrieving versionNumber data from AppVersion mock');
         });
     }
 }
@@ -111,11 +115,10 @@ export class NativeStorageMock
 }
 
 @Injectable()
-export class HTTPMock extends Mock
+export class HTTPMock
 {
-    constructor(@Inject(LibConfigService) protected config: LibConfig, private http: HttpClient)
+    constructor(private http: HttpClient)
     {
-        super(config);
     }
 
     get(endpoint: string, params?: any, header?: any)
@@ -166,16 +169,18 @@ export class NavigationBarMock
 {
     setUp(autohide?): Promise<any>
     {
-        return new Promise((resolve, reject) => {
+        return new Promise((resolve, reject) =>
+        {
             resolve({});
-        })
+        });
     }
 
     hideNavigationBar(): Promise<any>
     {
-        return new Promise((resolve, reject) => {
+        return new Promise((resolve, reject) =>
+        {
             resolve({});
-        })
+        });
     }
 }
 
@@ -184,37 +189,42 @@ export class NativeAudioMock
 {
     preloadSimple(id: string, path: string): Promise<any>
     {
-        return new Promise((resolve, reject) => {
+        return new Promise((resolve, reject) =>
+        {
             resolve();
-        })
+        });
     }
 
     preloadComplex(id: string, path: string, volume: number, voices: number, delay: number): Promise<any>
     {
-        return new Promise((resolve, reject) => {
+        return new Promise((resolve, reject) =>
+        {
             resolve();
-        })
+        });
     }
 
     play(id: string, callback?: Function): Promise<any>
     {
-        return new Promise((resolve, reject) => {
+        return new Promise((resolve, reject) =>
+        {
             resolve();
-        })
+        });
     }
 
     loop(id: string): Promise<any>
     {
-        return new Promise((resolve, reject) => {
+        return new Promise((resolve, reject) =>
+        {
             resolve();
-        })
+        });
     }
 
     stop(id: string): Promise<any>
     {
-        return new Promise((resolve, reject) => {
+        return new Promise((resolve, reject) =>
+        {
             resolve();
-        })
+        });
     }
 }
 
@@ -239,7 +249,7 @@ export function getNativeStorage(): any
 }
 export function getHTTP(): any
 {
-    return hasCordova()? HTTP : HTTPMock;
+    return hasCordova() ? HTTP : HTTPMock;
 }
 export function getNavigationBar(): any
 {
