@@ -18,6 +18,9 @@ export * from './lib/components/ws-data-list/ws-data-list.module';
 export * from './lib/components/debounce-button/debounce-button.component';
 export * from './lib/components/debounce-button/debounce-button.module';
 
+export * from './lib/components/centralizer/centralizer.component';
+export * from './lib/components/centralizer/centralizer.module';
+
 ///////////// Directives
 export * from './lib/directives/debounce-click/debounce-click.directive';
 
