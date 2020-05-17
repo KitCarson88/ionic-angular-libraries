@@ -6,6 +6,7 @@ import { LibConfigService, LibConfig } from '../kitcarson88-ionic-library.module
 import { AppVersion } from '@ionic-native/app-version/ngx';
 import { Device } from '@ionic-native/device/ngx';
 import { HTTP } from '@ionic-native/http/ngx';
+import { Media } from '@ionic-native/media/ngx';
 import { NativeStorage } from '@ionic-native/native-storage/ngx';
 import { NavigationBar } from '@ionic-native/navigation-bar/ngx';
 import { NativeAudio } from '@ionic-native/native-audio/ngx';
@@ -81,6 +82,12 @@ export class DeviceMock extends Mock
     manufacturer: string = this.isMockAvailable('device') && this.config.ionicMock.device.cordova ? this.config.ionicMock.device.manufacturer : "not available";
     isVirtual: boolean = this.isMockAvailable('device') && this.config.ionicMock.device.cordova ? this.config.ionicMock.device.isVirtual : true;
     serial: string = this.isMockAvailable('device') && this.config.ionicMock.device.cordova ? this.config.ionicMock.device.serial : "not available";
+}
+
+@Injectable()
+export class MediaMock
+{
+
 }
 
 @Injectable()
@@ -250,6 +257,10 @@ export function getNativeStorage(): any
 export function getHTTP(): any
 {
     return hasCordova() ? HTTP : HTTPMock;
+}
+export function getMedia(): any
+{
+    return hasCordova() ? Media : MediaMock;
 }
 export function getNavigationBar(): any
 {
