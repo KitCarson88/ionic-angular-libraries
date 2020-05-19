@@ -10,6 +10,7 @@ import { Media } from '@ionic-native/media/ngx';
 import { NativeStorage } from '@ionic-native/native-storage/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { NavigationBar } from '@ionic-native/navigation-bar/ngx';
+import { AndroidFullScreen } from '@ionic-native/android-full-screen/ngx';
 import { NativeAudio } from '@ionic-native/native-audio/ngx';
 
 ////////////////////Mock providers
@@ -202,6 +203,34 @@ export class NavigationBarMock
 }
 
 @Injectable()
+export class AndroidFullScreenMock
+{
+    isImmersiveModeSupported(): Promise<void>
+    {
+        return new Promise((resolve, rejcet) =>
+        {
+            resolve();
+        });
+    }
+
+    immersiveMode(): Promise<void>
+    {
+        return new Promise((resolve, rejcet) =>
+        {
+            resolve();
+        });
+    }
+
+    leanMode(): Promise<void>
+    {
+        return new Promise((resolve, rejcet) =>
+        {
+            resolve();
+        });
+    }
+}
+
+@Injectable()
 export class NativeAudioMock
 {
     preloadSimple(id: string, path: string): Promise<any>
@@ -279,6 +308,10 @@ export function getStatusBar(): any
 export function getNavigationBar(): any
 {
     return hasCordova() ? NavigationBar : NavigationBarMock;
+}
+export function getAndroidFullScreen(): any
+{
+    return hasCordova() ? AndroidFullScreen : AndroidFullScreenMock;
 }
 export function getNativeAudio(): any
 {

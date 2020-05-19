@@ -30,6 +30,7 @@
     "@angular/platform-browser": "~9.1.7",
     "@angular/platform-browser-dynamic": "~9.1.7",
     "@angular/router": "~9.1.7",
+    "@ionic-native/android-full-screen": "^5.26.0",
     "@ionic-native/app-version": "^5.26.0",
     "@ionic-native/core": "^5.26.0",
     "@ionic-native/device": "^5.26.0",
