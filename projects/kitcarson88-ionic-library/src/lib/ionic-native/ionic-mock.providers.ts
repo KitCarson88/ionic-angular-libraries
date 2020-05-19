@@ -8,6 +8,7 @@ import { Device } from '@ionic-native/device/ngx';
 import { HTTP } from '@ionic-native/http/ngx';
 import { Media } from '@ionic-native/media/ngx';
 import { NativeStorage } from '@ionic-native/native-storage/ngx';
+import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { NavigationBar } from '@ionic-native/navigation-bar/ngx';
 import { NativeAudio } from '@ionic-native/native-audio/ngx';
 
@@ -172,6 +173,15 @@ export class HTTPMock
 }
 
 @Injectable()
+export class StatusBarMock
+{
+    hide()
+    {
+
+    }
+}
+
+@Injectable()
 export class NavigationBarMock
 {
     setUp(autohide?): Promise<any>
@@ -261,6 +271,10 @@ export function getHTTP(): any
 export function getMedia(): any
 {
     return hasCordova() ? Media : MediaMock;
+}
+export function getStatusBar(): any
+{
+    return hasCordova() ? StatusBar : StatusBarMock;
 }
 export function getNavigationBar(): any
 {
