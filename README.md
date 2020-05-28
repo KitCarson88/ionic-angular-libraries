@@ -11,7 +11,7 @@ Run the terminal command inside ionic-angular-libraries folder:
     ng generate library kitcarson88-ionic-library
 
 ## Build instructions
-To build internal libraries do a complete ionic-5-library project build.
+To build internal libraries do a complete ionic-angular-libraries project build.
 To build the project run
     npm run build
 
