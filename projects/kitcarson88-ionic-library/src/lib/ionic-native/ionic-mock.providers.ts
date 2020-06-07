@@ -10,6 +10,7 @@ import { Media } from '@ionic-native/media/ngx';
 import { NativeStorage } from '@ionic-native/native-storage/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { NavigationBar } from '@ionic-native/navigation-bar/ngx';
+import { Admob } from '@ionic-native/admob/ngx';
 import { AndroidFullScreen } from '@ionic-native/android-full-screen/ngx';
 import { NativeAudio } from '@ionic-native/native-audio/ngx';
 
@@ -274,6 +275,17 @@ export class NativeAudioMock
     }
 }
 
+@Injectable()
+export class AdmobMock
+{
+    setOptions(option: any): Promise<any>
+    {
+        return new Promise((resolve, reject) => {
+            resolve();
+        });
+    }
+}
+
 /////////////////////Cordova verify function
 export function hasCordova(): boolean
 {
@@ -316,4 +328,8 @@ export function getAndroidFullScreen(): any
 export function getNativeAudio(): any
 {
     return hasCordova() ? NativeAudio : NativeAudioMock;
+}
+export function getAdmob(): any
+{
+    return hasCordova() ? Admob : AdmobMock;
 }

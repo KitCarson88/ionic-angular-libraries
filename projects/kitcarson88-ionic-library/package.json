@@ -5,6 +5,7 @@
     "@angular-redux/store": "^10.0.0",
     "@angular/common": "^9.1.7",
     "@angular/core": "^9.1.7",
+    "@ionic-native/admob": "^5.26.0",
     "@ionic-native/android-full-screen": "^5.26.0",
     "@ionic-native/app-version": "^5.26.0",
     "@ionic-native/core": "^5.26.0",
@@ -20,6 +21,7 @@
     "tslib": "^1.10.0"
   },
   "bundleDependencies": [
+    "@ionic-native/admob",
     "@ionic-native/android-full-screen",
     "@ionic-native/app-version",
     "@ionic-native/core",
