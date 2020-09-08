@@ -1,6 +1,0 @@
-@import 'mixins';
-
-.centering-container {
-    @include vertical-centering-transform(absolute);
-    @include horizontal-centering-container('.centered-container');
-}

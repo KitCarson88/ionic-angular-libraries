@@ -16,9 +16,9 @@
       "dom"
     ],
     "paths": {
-      "kitcarson88-ionic-library": [
-        "dist/kitcarson88-ionic-library/kitcarson88-ionic-library",
-        "dist/kitcarson88-ionic-library"
+      "ionic-angular-utilities": [
+        "dist/ionic-angular-utilities/ionic-angular-utilities",
+        "dist/ionic-angular-utilities"
       ]
     }
   },
