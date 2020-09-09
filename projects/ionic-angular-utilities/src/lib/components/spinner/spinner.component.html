@@ -1,0 +1,12 @@
+<div #ref><ng-content></ng-content></div>
+
+<ng-container *ngIf="ref.childNodes.length == 0">
+  <ion-content *ngIf="withContainer; else withoutContainer">
+    <centralizer>
+      <span>SPINNER</span>
+    </centralizer>
+  </ion-content>
+  <ng-template #withoutContainer>
+    SPINNER
+  </ng-template>
+</ng-container>

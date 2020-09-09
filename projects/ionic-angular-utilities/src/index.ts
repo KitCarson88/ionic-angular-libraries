@@ -2,6 +2,12 @@
 export * from './lib/components/centralizer/centralizer.component';
 export * from './lib/components/centralizer/centralizer.module';
 
+export * from './lib/components/debounce-button/debounce-button.component';
+export * from './lib/components/debounce-button/debounce-button.module';
+
+export * from './lib/components/spinner/spinner.component';
+export * from './lib/components/spinner/spinner.module';
+
 ///////////// Directives
 export * from './lib/directives/debounce-click/debounce-click.directive';
 
