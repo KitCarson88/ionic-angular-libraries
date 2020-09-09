@@ -1,13 +1,21 @@
 {
   "name": "ionic-angular-libraries",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "copy-styles": "node ./scripts/copy-libraries-styles.js",
+    "build": "ng build ionic-angular-utilities",
+    "postbuild": "npm run copy-styles",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "unlink": "cd dist/ionic-angular-utilities && npm unlink && cd ../../..",
+    "clean": "npm run unlink && rm -rf dist/ node_modules/ package-lock.json",
+    "link": "cd dist/ionic-angular-utilities && npm link && cd ../../..",
+    "pack": "cd dist/ionic-angular-utilities && npm pack && cd ../../..",
+    "build-link": "npm run build && npm run link",
+    "build-pack": "npm run build && npm run pack"
   },
   "private": true,
   "dependencies": {

@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
-import { IonicAngularUtilitiesComponent } from './ionic-angular-utilities.component';
-
-
 
 @NgModule({
-  declarations: [IonicAngularUtilitiesComponent],
-  imports: [
+  declarations: [
+
   ],
-  exports: [IonicAngularUtilitiesComponent]
+  imports: [
+
+  ],
+  exports: [
+    
+  ]
 })
 export class IonicAngularUtilitiesModule { }
