@@ -9,4 +9,7 @@ export class SpinnerComponent
 {
   @Input()
   withContainer?: boolean;
+
+  @Input()
+  name?: string;
 }

@@ -1,3 +1,5 @@
+@import '../../styles/mixins';
+
 ion-content {
     --background: var(--content-background, rgba(0, 0, 0, .15));
     width: 100%;
@@ -5,4 +7,27 @@ ion-content {
     top: 0;
     left: 0;
     z-index: var(--content-z-index, 10000);
+}
+
+@include keyframe(sk-rotateplane) {
+    0% { 
+        transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+        -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
+    }
+    50% { 
+        transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+        -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
+    }
+    100% { 
+        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+        -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    }
+}
+
+.rotate-square-spinner {
+    width: var(--square-side, 30px);
+    height: var(--square-side, 30px);
+    background-color: var(--square-color, #333);
+
+    @include animation(sk-rotateplane 1.2s infinite ease-in-out);
 }

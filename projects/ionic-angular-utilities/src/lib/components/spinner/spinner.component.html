@@ -3,10 +3,10 @@
 <ng-container *ngIf="ref.childNodes.length == 0">
   <ion-content *ngIf="withContainer; else withoutContainer">
     <centralizer>
-      <span>SPINNER</span>
+      <div class="rotate-square-spinner" *ngIf="name === 'rotateSquare'"></div>
     </centralizer>
   </ion-content>
   <ng-template #withoutContainer>
-    SPINNER
+    <div class="rotate-square-spinner" *ngIf="name === 'rotateSquare'"></div>
   </ng-template>
 </ng-container>
