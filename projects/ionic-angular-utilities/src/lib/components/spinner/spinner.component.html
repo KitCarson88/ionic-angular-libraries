@@ -3,10 +3,48 @@
 <ng-container *ngIf="ref.childNodes.length == 0">
   <ion-content *ngIf="withContainer; else withoutContainer">
     <centralizer>
-      <div class="rotate-square-spinner" *ngIf="name === 'rotateSquare'"></div>
+      <div class="rotating-square" *ngIf="name === 'rotatingSquare'"></div>
+      <div class="chasing-dot" *ngIf="name === 'chasingDot'">
+        <div class="chasing-dot__dot"></div>
+        <div class="chasing-dot__dot"></div>
+        <div class="chasing-dot__dot"></div>
+        <div class="chasing-dot__dot"></div>
+        <div class="chasing-dot__dot"></div>
+        <div class="chasing-dot__dot"></div>
+      </div>
+      <div class="double-bouncing-dot" *ngIf="name === 'doubleBouncingDot'">
+        <div class="double-bouncing-dot__dot1"></div>
+        <div class="double-bouncing-dot__dot2"></div>
+      </div>
+      <div class="stretching-bars" *ngIf="name === 'stretchingBars'">
+        <div class="stretching-bars__rect1"></div>
+        <div class="stretching-bars__rect2"></div>
+        <div class="stretching-bars__rect3"></div>
+        <div class="stretching-bars__rect4"></div>
+        <div class="stretching-bars__rect5"></div>
+      </div>
     </centralizer>
   </ion-content>
   <ng-template #withoutContainer>
-    <div class="rotate-square-spinner" *ngIf="name === 'rotateSquare'"></div>
+    <div class="rotating-square" *ngIf="name === 'rotatingSquare'"></div>
+    <div class="chasing-dot" *ngIf="name === 'chasingDot'">
+      <div class="chasing-dot__dot"></div>
+      <div class="chasing-dot__dot"></div>
+      <div class="chasing-dot__dot"></div>
+      <div class="chasing-dot__dot"></div>
+      <div class="chasing-dot__dot"></div>
+      <div class="chasing-dot__dot"></div>
+    </div>
+    <div class="double-bouncing-dot" *ngIf="name === 'doubleBouncingDot'">
+      <div class="double-bouncing-dot__dot1"></div>
+      <div class="double-bouncing-dot__dot2"></div>
+    </div>
+    <div class="stretching-bars" *ngIf="name === 'stretchingBars'">
+      <div class="stretching-bars__rect1"></div>
+      <div class="stretching-bars__rect2"></div>
+      <div class="stretching-bars__rect3"></div>
+      <div class="stretching-bars__rect4"></div>
+      <div class="stretching-bars__rect5"></div>
+    </div>
   </ng-template>
 </ng-container>
