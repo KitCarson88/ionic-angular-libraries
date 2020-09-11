@@ -27,6 +27,61 @@
         <div class="chasing-squares__square1"></div>
         <div class="chasing-squares__square2"></div>
       </div>
+      <div class="scaling-dot" *ngIf="name === 'scalingDot'"></div>
+      <div class="double-rotating-dot" *ngIf="name === 'doubleRotatingDot'">
+        <div class="double-rotating-dot__dot1"></div>
+        <div class="double-rotating-dot__dot2"></div>
+      </div>
+      <div class="three-bouncing-dot" *ngIf="name === 'threeBouncingDots'">
+        <div class="three-bouncing-dot__dot1"></div>
+        <div class="three-bouncing-dot__dot2"></div>
+        <div class="three-bouncing-dot__dot3"></div>
+      </div>
+      <div class="rotating-dot-circle" *ngIf="name === 'rotatingDotCircle'">
+        <div class="rotating-dot-circle__dot1"></div>
+        <div class="rotating-dot-circle__dot2"></div>
+        <div class="rotating-dot-circle__dot3"></div>
+        <div class="rotating-dot-circle__dot4"></div>
+        <div class="rotating-dot-circle__dot5"></div>
+        <div class="rotating-dot-circle__dot6"></div>
+        <div class="rotating-dot-circle__dot7"></div>
+        <div class="rotating-dot-circle__dot8"></div>
+        <div class="rotating-dot-circle__dot9"></div>
+        <div class="rotating-dot-circle__dot10"></div>
+        <div class="rotating-dot-circle__dot11"></div>
+        <div class="rotating-dot-circle__dot12"></div>
+      </div>
+      <div class="fading-square" *ngIf="name === 'fadingSquare'">
+        <div class="fading-square__square1"></div>
+        <div class="fading-square__square2"></div>
+        <div class="fading-square__square3"></div>
+        <div class="fading-square__square4"></div>
+        <div class="fading-square__square5"></div>
+        <div class="fading-square__square6"></div>
+        <div class="fading-square__square7"></div>
+        <div class="fading-square__square8"></div>
+        <div class="fading-square__square9"></div>
+      </div>
+      <div class="simple-circle" *ngIf="name === 'simpleSpinner'">
+        <div class="simple-circle__circle1"></div>
+        <div class="simple-circle__circle2"></div>
+        <div class="simple-circle__circle3"></div>
+        <div class="simple-circle__circle4"></div>
+        <div class="simple-circle__circle5"></div>
+        <div class="simple-circle__circle6"></div>
+        <div class="simple-circle__circle7"></div>
+        <div class="simple-circle__circle8"></div>
+        <div class="simple-circle__circle9"></div>
+        <div class="simple-circle__circle10"></div>
+        <div class="simple-circle__circle11"></div>
+        <div class="simple-circle__circle12"></div>
+      </div>
+      <div class="folding-square" *ngIf="name === 'foldingSquare'">
+        <div class="folding-square__square1"></div>
+        <div class="folding-square__square2"></div>
+        <div class="folding-square__square4"></div>
+        <div class="folding-square__square3"></div>
+      </div>
     </centralizer>
   </ion-content>
   <ng-template #withoutContainer>
@@ -53,6 +108,61 @@
     <div class="chasing-squares" *ngIf="name === 'chasingSquares'">
       <div class="chasing-squares__square1"></div>
       <div class="chasing-squares__square2"></div>
+    </div>
+    <div class="scaling-dot" *ngIf="name === 'scalingDot'"></div>
+    <div class="double-rotating-dot" *ngIf="name === 'doubleRotatingDot'">
+      <div class="double-rotating-dot__dot1"></div>
+      <div class="double-rotating-dot__dot2"></div>
+    </div>
+    <div class="three-bouncing-dot" *ngIf="name === 'threeBouncingDots'">
+      <div class="three-bouncing-dot__dot1"></div>
+      <div class="three-bouncing-dot__dot2"></div>
+      <div class="three-bouncing-dot__dot3"></div>
+    </div>
+    <div class="rotating-dot-circle" *ngIf="name === 'rotatingDotCircle'">
+      <div class="rotating-dot-circle__dot1"></div>
+      <div class="rotating-dot-circle__dot2"></div>
+      <div class="rotating-dot-circle__dot3"></div>
+      <div class="rotating-dot-circle__dot4"></div>
+      <div class="rotating-dot-circle__dot5"></div>
+      <div class="rotating-dot-circle__dot6"></div>
+      <div class="rotating-dot-circle__dot7"></div>
+      <div class="rotating-dot-circle__dot8"></div>
+      <div class="rotating-dot-circle__dot9"></div>
+      <div class="rotating-dot-circle__dot10"></div>
+      <div class="rotating-dot-circle__dot11"></div>
+      <div class="rotating-dot-circle__dot12"></div>
+    </div>
+    <div class="fading-square" *ngIf="name === 'fadingSquare'">
+      <div class="fading-square__square1"></div>
+      <div class="fading-square__square2"></div>
+      <div class="fading-square__square3"></div>
+      <div class="fading-square__square4"></div>
+      <div class="fading-square__square5"></div>
+      <div class="fading-square__square6"></div>
+      <div class="fading-square__square7"></div>
+      <div class="fading-square__square8"></div>
+      <div class="fading-square__square9"></div>
+    </div>
+    <div class="simple-circle" *ngIf="name === 'simpleSpinner'">
+      <div class="simple-circle__circle1"></div>
+      <div class="simple-circle__circle2"></div>
+      <div class="simple-circle__circle3"></div>
+      <div class="simple-circle__circle4"></div>
+      <div class="simple-circle__circle5"></div>
+      <div class="simple-circle__circle6"></div>
+      <div class="simple-circle__circle7"></div>
+      <div class="simple-circle__circle8"></div>
+      <div class="simple-circle__circle9"></div>
+      <div class="simple-circle__circle10"></div>
+      <div class="simple-circle__circle11"></div>
+      <div class="simple-circle__circle12"></div>
+    </div>
+    <div class="folding-square" *ngIf="name === 'foldingSquare'">
+      <div class="folding-square__square1"></div>
+      <div class="folding-square__square2"></div>
+      <div class="folding-square__square4"></div>
+      <div class="folding-square__square3"></div>
     </div>
   </ng-template>
 </ng-container>
