@@ -23,6 +23,10 @@
         <div class="stretching-bars__rect4"></div>
         <div class="stretching-bars__rect5"></div>
       </div>
+      <div class="chasing-squares" *ngIf="name === 'chasingSquares'">
+        <div class="chasing-squares__square1"></div>
+        <div class="chasing-squares__square2"></div>
+      </div>
     </centralizer>
   </ion-content>
   <ng-template #withoutContainer>
@@ -45,6 +49,10 @@
       <div class="stretching-bars__rect3"></div>
       <div class="stretching-bars__rect4"></div>
       <div class="stretching-bars__rect5"></div>
+    </div>
+    <div class="chasing-squares" *ngIf="name === 'chasingSquares'">
+      <div class="chasing-squares__square1"></div>
+      <div class="chasing-squares__square2"></div>
     </div>
   </ng-template>
 </ng-container>
