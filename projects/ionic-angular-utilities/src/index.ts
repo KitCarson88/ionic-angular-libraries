@@ -11,6 +11,9 @@ export * from './lib/components/spinner/spinner.module';
 export * from './lib/components/error-container/error-container.component';
 export * from './lib/components/error-container/error-container.module';
 
+export * from './lib/components/ws-data/ws-data.component';
+export * from './lib/components/ws-data/ws-data.module';
+
 ///////////// Directives
 export * from './lib/directives/debounce-click/debounce-click.directive';
 

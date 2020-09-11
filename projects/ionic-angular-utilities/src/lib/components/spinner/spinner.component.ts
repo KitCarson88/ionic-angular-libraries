@@ -11,5 +11,5 @@ export class SpinnerComponent
   withContainer?: boolean;
 
   @Input()
-  name?: string;
+  name?: 'rotatingSquare' | 'chasingDot' | 'doubleBouncingDot' | 'stretchingBars' | 'chasingSquares' | 'scalingDot' | 'doubleRotatingDot' | 'threeBouncingDots' | 'rotatingDotCircle' | 'fadingSquare' | 'simpleSpinner' | 'foldingSquare';
 }

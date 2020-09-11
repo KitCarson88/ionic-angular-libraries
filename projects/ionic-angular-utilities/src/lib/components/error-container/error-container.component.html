@@ -1,8 +1,8 @@
 <div #ref><ng-content></ng-content></div>
 
-<div class="container" *ngIf="ref.childNodes.length == 0">
-  <span class="container__message" [innerHtml]="message"></span>
-  <ion-button class="container__button" [fill]="buttonFill" [shape]="buttonShape" [color]="buttonColor" *ngIf="retryButtonLabel && retryButtonLabel.length" (click)="reload.emit()">
+<div class="erro" *ngIf="ref.childNodes.length == 0">
+  <span class="error__message" [innerHtml]="message"></span>
+  <ion-button class="error__button" [fill]="buttonFill" [shape]="buttonShape" [color]="buttonColor" *ngIf="retryButtonLabel && retryButtonLabel.length" (click)="reload.emit()">
     <span>{{retryButtonLabel}}</span>
   </ion-button>
 </div>
