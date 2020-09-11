@@ -1,0 +1,23 @@
+.container {
+    text-align: var(--align, center);
+    width: var(--width, 100%);
+    padding-left: var(--padding-start, 0);
+    padding-right: var(--padding-end, 0);
+    padding-top: var(--padding-top, 0);
+    padding-bottom: var(--padding-bottom, 0);
+
+    &__message {
+        text-align: left;
+        font-size: var(--message-font-size, 18px);
+        font-weight: var(--message-font-weight, 400);
+        color: var(--message-color, #ddd);
+        display: inline-block;
+        width: 100%;
+        margin-bottom: var(--message-margin-bottom, 15px);
+    }
+
+    &__button {
+        width: var(--button-width) !important;
+        height: var(--button-height) !important;
+    }
+}

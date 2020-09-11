@@ -8,6 +8,9 @@ export * from './lib/components/debounce-button/debounce-button.module';
 export * from './lib/components/spinner/spinner.component';
 export * from './lib/components/spinner/spinner.module';
 
+export * from './lib/components/error-container/error-container.component';
+export * from './lib/components/error-container/error-container.module';
+
 ///////////// Directives
 export * from './lib/directives/debounce-click/debounce-click.directive';
 
