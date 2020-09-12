@@ -2,7 +2,13 @@
   <ng-content select=[customSpinner]></ng-content>
 </spinner>
 <ng-template #callEndend>
+  <error-container class="error-container" *ngIf="options.error$ | async"
+    [message]="options.errorMessage" [retryButtonLabel]="options.errorRetryButtonLabel"
+    [retryButtonFill]="options.errorRetryButtonFill" [retryButtonShape]="options.errorRetryButtonShape"
+    [retryButtonColor]="options.errorRetryButtonColor">
+  </error-container>
 
+  <ng-content select=[dataContent]></ng-content>
 </ng-template>
 
 

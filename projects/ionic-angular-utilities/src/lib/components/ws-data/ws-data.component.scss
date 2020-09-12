@@ -5,5 +5,20 @@
     --size: var(--spinner-size);
     --color: var(--spinner-color);
     --element-size: var(--spinner-element-size);
-    --element-margin: var(--spinner-element-margin);
+    --element-margin: var(--spinner-element-margin);    
+}
+.error-container {
+    --align: var(--error-container-align);
+    --width: var(--error-container-width);
+    --padding-start: var(--error-container-padding-start);
+    --padding-end: var(--error-container-padding-end);
+    --padding-top: var(--error-container-padding-top);
+    --padding-bottom: var(--error-container-padding-bottom);
+    --message-align: var(--error-container-message-align);
+    --message-font-size: var(--error-container-message-font-size);
+    --message-font-weight: var(--error-container-message-font-weight);
+    --message-color: var(--error-container-message-color);
+    --message-margin-bottom: var(--error-container-message-margin-bottom);
+    --button-width: var(--error-container-button-width);
+    --button-height: var(--error-container-button-height);
 }

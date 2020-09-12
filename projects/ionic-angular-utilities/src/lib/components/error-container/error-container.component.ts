@@ -10,16 +10,16 @@ export class ErrorContainerComponent
   @Input()
   message?: string;
 
-  @Input()
-  retryButtonLabel?: string;
+  @Input('retryButtonLabel')
+  buttonLabel?: string;
 
-  @Input()
+  @Input('retryButtonFill')
   buttonFill?: 'clear' | 'outline' | 'solid';
 
-  @Input()
+  @Input('retryButtonShape')
   buttonShape?: 'round';
 
-  @Input()
+  @Input('retryButtonColor')
   buttonColor?: string;
   
   @Output()
