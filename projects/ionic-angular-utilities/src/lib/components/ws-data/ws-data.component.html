@@ -1,4 +1,4 @@
-<spinner *ngIf="options.loading$ | async; else callEndend" [withContainer]="options.loadingSpinnerWithContainer" [name]="options.loadingSpinnerName">
+<spinner class="spinner" *ngIf="options.loading$ | async; else callEndend" [withContainer]="options.loadingSpinnerWithContainer" [name]="options.loadingSpinnerName">
   <ng-content select=[customSpinner]></ng-content>
 </spinner>
 <ng-template #callEndend>

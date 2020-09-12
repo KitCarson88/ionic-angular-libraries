@@ -32,9 +32,9 @@ ion-content {
 }
 
 .rotating-square {
-    width: var(--square-side, 40px);
-    height: var(--square-side, 40px);
-    background-color: var(--square-color, #333);
+    width: var(--size, 40px);
+    height: var(--size, 40px);
+    background-color: var(--color, #333);
 
     -webkit-animation: rotate-square 1.2s infinite ease-in-out;
     animation: rotate-square 1.2s infinite ease-in-out;
@@ -73,8 +73,8 @@ ion-content {
 }
 
 .chasing-dot {
-    width: var(--chase-side, 40px);
-    height: var(--chase-side, 40px);
+    width: var(--size, 40px);
+    height: var(--size, 40px);
     position: relative;
     margin: 20px;
 
@@ -99,9 +99,9 @@ ion-content {
         &:before {
             content: '';
             display: block;
-            width: var(--dot-side, 10px);
-            height: var(--dot-side, 10px);
-            background-color: var(--square-color, #000);;
+            width: var(--element-size, 10px);
+            height: var(--element-size, 10px);
+            background-color: var(--color, #000);;
             border-radius: 100%;
             @include animation(chase-dot-before 2.0s infinite ease-in-out both);
 
@@ -133,8 +133,8 @@ ion-content {
 }
 
 .double-bouncing-dot {
-    width: var(--bounce-side, 40px);
-    height: var(--bounce-side, 40px);
+    width: var(--size, 40px);
+    height: var(--size, 40px);
 
     position: relative;
 
@@ -142,7 +142,7 @@ ion-content {
         width: 100%;
         height: 100%;
         border-radius: 50%;
-        background-color: var(--dot-color, #333);;
+        background-color: var(--color, #333);;
         opacity: 0.6;
         position: absolute;
         top: 0;
@@ -176,15 +176,15 @@ ion-content {
 }
 
 .stretching-bars {
-    width: var(--bars-width, 50px);;
-    height: var(--bars-height, 40px);;
+    width: var(--size, 40px);
+    height: var(--size, 40px);
     text-align: center;
 
     & > div {
-        background-color: var(--bars-color, #333);;
+        background-color: var(--color, #333);;
         height: 100%;
-        width: var(--bar-width, 6px);
-        margin-right: var(--bar-margin, 1px);
+        width: var(--element-size, 6px);
+        margin-right: var(--element-margin, 1px);
         display: inline-block;
     
         -webkit-animation: stretch-deltay 1.2s infinite ease-in-out;
@@ -240,14 +240,14 @@ ion-content {
 }
 
 .chasing-squares {
-    width: var(--chase-size, 40px);
-    height: var(--chase-size, 40px);
+    width: var(--size, 40px);
+    height: var(--size, 40px);
     position: relative;
     
     &__square1, &__square2 {
-        background-color: var(--square-color, #333);
-        width: var(--square-size, 15px);
-        height: var(--square-size, 15px);
+        background-color: var(--color, #333);
+        width: var(--element-size, 15px);
+        height: var(--element-size, 15px);
         position: absolute;
         top: 0;
         left: 0;
@@ -283,9 +283,9 @@ ion-content {
 }
 
 .scaling-dot {
-    width: var(--scale-size, 40px);
-    height: var(--scale-size, 40px);
-    background-color: var(--dot-color, #333);
+    width: var(--size, 40px);
+    height: var(--size, 40px);
+    background-color: var(--color, #333);
   
     border-radius: 100%;  
     -webkit-animation: scaleout 1.0s infinite ease-in-out;
@@ -297,8 +297,8 @@ ion-content {
 @keyframes rotate { 100% { transform: rotate(360deg); -webkit-transform: rotate(360deg) }}
 
 .double-rotating-dot {
-    width: var(--rotate-size, 40px);
-    height: var(--rotate-size, 40px);
+    width: var(--size, 40px);
+    height: var(--size, 40px);
     position: relative;
     text-align: center;
 
@@ -306,12 +306,12 @@ ion-content {
     animation: rotate 2.0s infinite linear;
     
     &__dot1, &__dot2 {
-        width: var(--dot-size, 60%);
-        height: var(--dot-size, 60%);
+        width: var(--element-size, 60%);
+        height: var(--element-size, 60%);
         display: inline-block;
         position: absolute;
         top: 0;
-        background-color: var(--dot-color, #333);
+        background-color: var(--color, #333);
         border-radius: 100%;
     
         -webkit-animation: bounce 2.0s infinite ease-in-out;
@@ -344,15 +344,15 @@ ion-content {
 }
 
 .three-bouncing-dot {
-    width: var(--bouncing-size, 70px);
+    width: var(--size, 70px);
     text-align: center;
     
     & > div {
-        background-color: var(--dot-color, #333);
+        background-color: var(--color, #333);
         display: inline-block;
-        width: var(--dot-size, 18px);
-        height: var(--dot-size, 18px);
-        margin-right: var(--dot-margin, 5px);
+        width: var(--element-size, 18px);
+        height: var(--element-size, 18px);
+        margin-right: var(--element-margin, 5px);
 
         border-radius: 100%;
     
@@ -395,8 +395,8 @@ ion-content {
 }
 
 .rotating-dot-circle {
-    width: var(--circle-size, 40px);
-    height: var(--circle-size, 40px);
+    width: var(--size, 40px);
+    height: var(--size, 40px);
     position: relative;
 
     & > div {
@@ -410,9 +410,9 @@ ion-content {
             content: '';
             display: block;
             margin: 0 auto;
-            width: var(--dot-size, 15%);
-            height: var(--dot-size, 15%);
-            background-color: var(--dot-color, #333);
+            width: var(--element-size, 15%);
+            height: var(--element-size, 15%);
+            background-color: var(--color, #333);
             border-radius: 100%;
             -webkit-animation: circle-bounce 1.2s infinite ease-in-out both;
             animation: circle-bounce 1.2s infinite ease-in-out both;
@@ -556,13 +556,13 @@ ion-content {
 }
 
 .fading-square {
-    width: var(--fade-size, 40px);
-    height: var(--fade-size, 40px);
+    width: var(--size, 40px);
+    height: var(--size, 40px);
     
     & > div {
-        width: var(--square-size, 33%);
-        height: var(--square-size, 33%);
-        background-color: var(--square-color, #333);
+        width: var(--element-size, 33%);
+        height: var(--element-size, 33%);
+        background-color: var(--color, #333);
         float: left;
         -webkit-animation: square-scale 1.3s infinite ease-in-out;
         animation: square-scale 1.3s infinite ease-in-out; 
@@ -618,8 +618,8 @@ ion-content {
 }
 
 .simple-circle {
-    width: var(--spinner-size, 40px);
-    height: var(--spinner-size, 40px);
+    width: var(--size, 40px);
+    height: var(--size, 40px);
     position: relative;
     
     & > div {
@@ -633,9 +633,9 @@ ion-content {
             content: '';
             display: block;
             margin: 0 auto;
-            width: var(--dot-size, 15%);
-            height: var(--dot-size, 15%);
-            background-color: var(--spinner-color, #333);
+            width: var(--element-size, 15%);
+            height: var(--element-size, 15%);
+            background-color: var(--color, #333);
             border-radius: 100%;
             -webkit-animation: spinner-rotation 1.2s infinite ease-in-out both;
             animation: spinner-rotation 1.2s infinite ease-in-out both;
@@ -788,8 +788,8 @@ ion-content {
 }
 
 .folding-square {
-    width: var(--square-size, 40px);
-    height: var(--square-size, 40px);
+    width: var(--size, 40px);
+    height: var(--size, 40px);
     position: relative;
     -webkit-transform: rotateZ(45deg);
     transform: rotateZ(45deg);
@@ -810,7 +810,7 @@ ion-content {
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: var(--square-color, #333);
+            background-color: var(--color, #333);
             -webkit-animation: fold 2.4s infinite linear both;
             animation: fold 2.4s infinite linear both;
             -webkit-transform-origin: 100% 100%;
