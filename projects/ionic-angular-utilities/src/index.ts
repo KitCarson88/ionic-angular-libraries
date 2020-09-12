@@ -17,4 +17,8 @@ export * from './lib/components/ws-data/ws-data.module';
 ///////////// Directives
 export * from './lib/directives/debounce-click/debounce-click.directive';
 
+///////////// Entities
+export * from './lib/entities/ws-data-options';
+
+
 export * from './lib/ionic-angular-utilities.module';
