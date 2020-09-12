@@ -10,39 +10,3 @@
 
   <ng-content select=[dataContent]></ng-content>
 </ng-template>
-
-
-
-
-
-
-
-<!--
-<spinner *ngIf="loading$ | async; else callEndend">
-  <ng-content select=[customSpinner]></ng-content>
-</spinner>
-<ng-template #callEndend>
-  <error-container [message]="errorMessage" [retryButtonLabel]="retryButtonLabel" *ngIf="error$ | async" (reload)="retryButtonClick.emit()">
-    <ng-content select=[customError]></ng-content>
-  </error-container>
-
-  <ng-content select=[dataContent]></ng-content>
-</ng-template>
-
-
-<spinner *ngIf="wsDataOptions.loading$ | async; else callEndend" 
-  [name]="wsDataOptions && wsDataOptions.spinner ? wsDataOptions.spinner.name : '' ">
-  <ng-content select=[customSpinner]></ng-content>
-</spinner>
-<ng-template #callEndend>
-  <error-container 
-    [message]="wsDataOptions.errorMessage" 
-    [retryButtonLabel]="wsDataOptions.retryButtonLabel" 
-    *ngIf="wsDataOptions.error$ | async" (reload)="retryButtonClick.emit()">
-    <ng-content select=[customError]></ng-content>
-  </error-container>
-
-  <ng-content select=[dataContent]></ng-content>
-  
-</ng-template>-->
-
