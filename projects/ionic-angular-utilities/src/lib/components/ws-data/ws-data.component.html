@@ -5,7 +5,7 @@
   <error-container class="error-container" *ngIf="options.error$ | async"
     [message]="options.errorMessage" [retryButtonLabel]="options.errorRetryButtonLabel"
     [retryButtonFill]="options.errorRetryButtonFill" [retryButtonShape]="options.errorRetryButtonShape"
-    [retryButtonColor]="options.errorRetryButtonColor">
+    [retryButtonColor]="options.errorRetryButtonColor" (reload)="retry.emit()">
   </error-container>
 
   <ng-content select=[dataContent]></ng-content>
