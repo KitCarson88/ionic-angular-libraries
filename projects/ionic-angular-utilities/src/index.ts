@@ -20,5 +20,8 @@ export * from './lib/directives/debounce-click/debounce-click.directive';
 ///////////// Entities
 export * from './lib/entities/ws-data-options';
 
+//////////// Ionic native mocks
+export * from './lib/ionic-native/ionic-mock.providers';
+
 
 export * from './lib/ionic-angular-utilities.module';
