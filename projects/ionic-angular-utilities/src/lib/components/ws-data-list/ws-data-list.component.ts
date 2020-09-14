@@ -16,10 +16,10 @@ export class WsDataListComponent implements OnInit
   @Output()
   retry? = new EventEmitter();
 
-  emptyListCondition$: Observable<boolean>;
+  dataAvailableCondition$: Observable<boolean>;
 
   ngOnInit()
   {
-    this.emptyListCondition$ = (typeof this.options.emptyListCondition === 'boolean') ? of(this.options.emptyListCondition) : this.options.emptyListCondition;
+    this.dataAvailableCondition$ = (typeof this.options.dataAvailableCondition === 'boolean') ? of(this.options.dataAvailableCondition) : this.options.dataAvailableCondition;
   }
 }
