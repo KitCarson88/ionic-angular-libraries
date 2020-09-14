@@ -1,0 +1,9 @@
+.spinner {
+    --content-background: var(--spinner-content-background, rgba(0, 0, 0, 0));
+    --content-z-index: var(--spinner-content-z-index, rgba(0, 0, 0, .15));
+
+    --size: var(--spinner-size);
+    --color: var(--spinner-color);
+    --element-size: var(--spinner-element-size);
+    --element-margin: var(--spinner-element-margin);    
+}

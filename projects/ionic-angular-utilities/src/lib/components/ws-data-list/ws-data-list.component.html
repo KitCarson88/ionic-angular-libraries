@@ -9,5 +9,15 @@
     <ng-content select=[customError]></ng-content>
   </error-container>
 
-  <ng-content select=[dataContent]></ng-content>
+  <ng-container *ngIf="(options.data$ | async) as items">
+    <error-container [message]="options.emptyListMessage" *ngIf="emptyListCondition$ | async; else data">
+      <ng-content select=[customEmptyListError]></ng-content>
+    </error-container>
+
+    <ng-template #data>
+      <ng-container *ngFor="let item of items">
+        <ng-container *ngTemplateOutlet="options.dataItemTemplate; context: {$implicit: item}"></ng-container>
+      </ng-container>
+    </ng-template>
+  </ng-container>
 </ng-template>

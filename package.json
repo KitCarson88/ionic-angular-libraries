@@ -30,6 +30,7 @@
     "@ionic-native/admob": "^5.28.0",
     "@ionic-native/android-full-screen": "^5.28.0",
     "@ionic-native/app-version": "^5.28.0",
+    "@ionic-native/core": "^5.28.0",
     "@ionic-native/deeplinks": "^5.28.0",
     "@ionic-native/device": "^5.28.0",
     "@ionic-native/http": "^5.28.0",

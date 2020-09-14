@@ -7,6 +7,7 @@
     "@ionic-native/admob": "^5.28.0",
     "@ionic-native/android-full-screen": "^5.28.0",
     "@ionic-native/app-version": "^5.28.0",
+    "@ionic-native/core": "^5.28.0",
     "@ionic-native/deeplinks": "^5.28.0",
     "@ionic-native/device": "^5.28.0",
     "@ionic-native/http": "^5.28.0",
@@ -15,15 +16,14 @@
     "@ionic-native/native-storage": "^5.28.0",
     "@ionic-native/navigation-bar": "^5.28.0",
     "@ionic-native/status-bar": "^5.28.0",
-    "@ionic/angular": "^5.3.2"
-  },
-  "dependencies": {
+    "@ionic/angular": "^5.3.2",
     "tslib": "^1.10.0"
   },
   "bundleDependencies": [
     "@ionic-native/admob",
     "@ionic-native/android-full-screen",
     "@ionic-native/app-version",
+    "@ionic-native/core",
     "@ionic-native/deeplinks",
     "@ionic-native/device",
     "@ionic-native/http",
