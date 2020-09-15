@@ -15,18 +15,90 @@ The debounce click directive lets to bind click events to components using a rxj
 
 To use it on a component or tag, provide the `debounceClick` identifier.
 
-##### Debounce time
-This attribute let the developer to set the debounce time in which multiple clicks are ignored.
+##### Properties
 
-| Parameter      | Description                                        |
-| -------------- | -------------------------------------------------- |
-| `debounceTime` | Positive numeric value of milliseconds to debounce |
+|                                                                                                         |
+| `debounceTime`                                                                                          |
+|                                                                                                         |
+| ------------------------------------------------------------------------------------------------------- |
+| Description    | Time to debounce specified as milliseconds                                             |
+| -------------- | -------------------------------------------------------------------------------------- |
+| Type           | `number`                                                                               |
+| -------------- | -------------------------------------------------------------------------------------- |
+| Default        | `500`
 
 ##### Events
 
-| Name            | Description                |
-| --------------- | -------------------------- |
-| `debounceClick` | Emitted on debounce click  |
+| Name            | Description                                                                           |
+| --------------- | ------------------------------------------------------------------------------------- |
+| `debounceClick` | Emitted on debounce click                                                             |
+
+### Components
+#### Debounce button
+It wraps an ion-button component with a different click behaviour, based on debounce click directive. The button doesn't trigger a callback immediately on user click. The click happens after a debounce time. During this time
+a scale animation on button is rendered.
+
+##### Properties
+
+|                                                                                                         |
+| `color`                                                                                                 |
+|                                                                                                         |
+| ------------------------------------------------------------------------------------------------------- |
+| Description    | The color to use from your application's color palette.                                |
+|                | Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`,            |
+|                | `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`                           |
+| -------------- | -------------------------------------------------------------------------------------- |
+| Type           | `string | undefined`                                                                   |
+| -------------- | -------------------------------------------------------------------------------------- |
+|                                                                                                         |
+| `cssClass`                                                                                              |
+|                                                                                                         |
+| ------------------------------------------------------------------------------------------------------- |
+| Description    | A class to assign to the component, to globally style it                               |
+| -------------- | -------------------------------------------------------------------------------------- |
+| Type           | `string`                                                                               |
+| -------------- | -------------------------------------------------------------------------------------- |
+|                                                                                                         |
+| `debounce`                                                                                              |
+|                                                                                                         |
+| ------------------------------------------------------------------------------------------------------- |
+| Description    | Time to debounce specified in milliseconds                                             |
+| -------------- | -------------------------------------------------------------------------------------- |
+| Type           | `number | undefined`                                                                   |
+| -------------- | -------------------------------------------------------------------------------------- |
+|                                                                                                         |
+| `disabled`                                                                                              |
+|                                                                                                         |
+| ------------------------------------------------------------------------------------------------------- |
+| Description    | If `true`, the user cannot interact with the button.                                   |
+| -------------- | -------------------------------------------------------------------------------------- |
+| Type           | `boolean`                                                                              |
+| -------------- | -------------------------------------------------------------------------------------- |
+| Default        | `false`                                                                                |
+| -------------- | -------------------------------------------------------------------------------------- |
+|                                                                                                         |
+| `fill`                                                                                                  |
+|                                                                                                         |
+| ------------------------------------------------------------------------------------------------------- |
+| Description    | Set to `"clear"` for a transparent button,                                             |
+|                | to `"outline"` for a transparent button with a border, or to `"solid"`.                |
+| -------------- | -------------------------------------------------------------------------------------- |
+| Type           | `"clear" | "default" | "outline" | "solid" | undefined`                                |
+| -------------- | -------------------------------------------------------------------------------------- |
+|                                                                                                         |
+| `shape`                                                                                                 |
+|                                                                                                         |
+| ------------------------------------------------------------------------------------------------------- |
+| Description    | The button shape.                                                                      |
+| -------------- | -------------------------------------------------------------------------------------- |
+| Type           | `round | undefined`                                                                    |
+
+##### Events
+
+| Name            | Description                                                                           |
+| --------------- | ------------------------------------------------------------------------------------- |
+| `debounceClick` | Emitted on debounce click                                                             |
+
 
 ## Linking and packaging instructions
 These few lines explain how to link, or publish or export as archive the ionic-angular-utilities code,
