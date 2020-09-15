@@ -13,7 +13,20 @@ The libraries includes some common facilities tipically used during an app devel
 #### Debounce click
 The debounce click directive lets to bind click events to components using a rxjs debounce time operator. In this way multiple sequential clicks on components are prevented and triggered as a single click.
 
-To use it on a component or tag, provide the `debounceClick` identifier, a `debounceTime` variable, and a `decounceClick` callback.
+To use it on a component or tag, provide the `debounceClick` identifier.
+
+##### Debounce time
+This attribute let the developer to set the debounce time in which multiple clicks are ignored.
+
+| Parameter      | Description                                        |
+| -------------- | -------------------------------------------------- |
+| `debounceTime` | Positive numeric value of milliseconds to debounce |
+
+##### Events
+
+| Name            | Description                |
+| --------------- | -------------------------- |
+| `debounceClick` | Emitted on debounce click  |
 
 ## Linking and packaging instructions
 These few lines explain how to link, or publish or export as archive the ionic-angular-utilities code,
