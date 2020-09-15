@@ -1,24 +1,63 @@
-# IonicAngularUtilities
+# Ionic Angular Utilities
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.12.
+The library contains some Ionic and Angular utilities usable in a own project.
 
-## Code scaffolding
+## Overview
+The project contains following libraries:
+- Ionic Angular Utilities
 
-Run `ng generate component component-name --project ionic-angular-utilities` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ionic-angular-utilities`.
-> Note: Don't forget to add `--project ionic-angular-utilities` or else it will be added to the default project in your `angular.json` file. 
+## Ionic Angular Utilities
+The libraries includes some common facilities tipically used during an app development. They will be described in following paragraphs.
 
-## Build
+### Directives
+#### Debounce click
+The debounce click directive lets to bind click events to components using a rxjs debounce time operator. In this way multiple sequential clicks on components are prevented and triggered as a single click.
 
-Run `ng build ionic-angular-utilities` to build the project. The build artifacts will be stored in the `dist/` directory.
+To use it on a component or tag, provide the `debounceClick` identifier, a `debounceTime` variable, and a decounceClick callback.
 
-## Publishing
+## Linking and packaging instructions
+These few lines explain how to link, or publish or export as archive the ionic-angular-utilities code,
+after a ionic-angular-libraries main project build.
 
-After building your library with `ng build ionic-angular-utilities`, go to the dist folder `cd dist/ionic-angular-utilities` and run `npm publish`.
+### Link the library (only for dev purpose)
+From the main ionic-angular-libraries directory go with a terminal into dist/ionic-angular-utilities and link globally the library with related npm command:
+    cd dist/ionic-angular-utilities
+    npm link
 
-## Running unit tests
+Now inside your project, you can simply link it with the command:
+    npm link ionic-angular-utilities
 
-Run `ng test ionic-angular-utilities` to execute the unit tests via [Karma](https://karma-runner.github.io).
+In your code you can now import its modules at the same way of a normal npm package installation:
 
-## Further help
+import { ... } from 'ionic-angular-utilities';
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+To use this linking method, into your project angular.json file, you ave to set a preserveSymlinks flag following this
+structure:
+
+  "projects": {
+    "app": {
+      "architect": {
+        "build": {
+          "options": {
+            "preserveSymlinks": true,
+
+
+Note that in your package.json nothing was added. The link process is for test purpose only.
+
+### Unlink
+To unlink the app use the npm unlink command:
+* inside your project do
+    npm unlink ionic-angular-utilities
+* then inside the library dist/ionic-angular-utilities folder do
+    npm unlink
+
+### Pack and export the library as an archive
+From the main ionic-angular-libraries directory go with a terminal into dist/ionic-angular-utilities and pack the library with related npm command:
+    cd dist/ionic-angular-utilities
+    npm pack
+
+Into the same direcotory an ionic-angular-utilities tgz file was created (the name contains also the current version of the library taken from its package.json). Put this archive in any folder of your computer (also in the main directory of your project).
+
+Inside your project install it as a normal dependency, but providing its relative or absolute path:
+npm install /path/to/archive.
