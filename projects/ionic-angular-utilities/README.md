@@ -17,13 +17,19 @@ To use it on a component or tag, provide the `debounceClick` identifier.
 
 ##### Properties
 
-| Parameter      | `debounceTime`                                                                         |
-| -------------- | -------------------------------------------------------------------------------------- |
+| `debounceTime`                                                                                          |
+| ------------------------------------------------------------------------------------------------------- |
 | Description    | Time to debounce specified as milliseconds                                             |
 | -------------- | -------------------------------------------------------------------------------------- |
 | Type           | `number`                                                                               |
 | -------------- | -------------------------------------------------------------------------------------- |
-| Default        | `500`
+| Default        | `500`                                                                                  |
+
+| `debounceTime` ||
+|-|
+| Description | Time to debounce specified as milliseconds |
+| Type | `number` |
+| Default | `500` |
 
 ##### Events
 
