@@ -195,13 +195,52 @@ Its a container that shows and error message and optionally a retry button with 
 | `--button-height`     | Inner button height |
 
 ##### Example usage
-First import `ErrorContainerModule` into the module imports of the page or componenent where the centralizer will be used.
+First import `ErrorContainerModule` into the module imports of the page or componenent where the error container will be used.
 
 Then:
 
 ```
 <error-container message="An error occured" retryButtonLabel="Retry">
 </error-container>
+```
+
+The container admits also a custom definition of its inner parts. It's useful in cases of other error-container sorrounding components.
+
+#### Spinner
+
+A loading custom component with some spinner types usable only specifing their name.
+
+##### Properties
+
+| `name`      |                                                                                        |
+| -------------- | -------------------------------------------------------------------------------------- |
+| Description    | The spinner type name                                                            |
+| Type           | `"rotatingSquare" \| "chasingDot" \| "doubleBouncingDot" \| "stretchingBars" \| "chasingSquares" \| "scalingDot" \| "doubleRotatingDot" \| "threeBouncingDots" \| "rotatingDotCircle" \| "fadingSquare" \| "simpleSpinner" \| "foldingSquare" \| undefined`                      |
+
+| `withContainer`      |                                                                                        |
+| -------------- | -------------------------------------------------------------------------------------- |
+| Description    | If setted to `true` the spinner will be sorrounded from an ion-content container.    |
+| Type           | `boolean \| undefined`                                                                  |
+
+##### CSS Custom Properties
+
+| Name                  | Description                                                                           |
+| --------------------- | ------------------------------------------------------------------------------------- |
+| `--content-background`| Sorround ion-content background  |
+| `--content-z-index`   | Sorround ion-content z-index |
+| `--size`              | Spinner size |
+| `--color`             | Spinner color |
+| `--element-size`      | Inner spinner single component size. For example, on `"chasingDot"`spinner, it defines the size of each single dot |
+| `--element-margin`    | Inner spinner single element margin. In some spinners like `"stretchingBars"`, it defines a lateral margin among single inner elements |
+
+##### Example usage
+First import `SpinnerModule` into the module imports of the page or componenent where the spinner will be used.
+
+Then:
+
+```
+<spinner name="chasingDot">
+</spinner>
 ```
 
 The container admits also a custom definition of its inner parts. It's useful in cases of other error-container sorrounding components.
