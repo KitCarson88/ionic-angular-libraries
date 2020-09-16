@@ -29,6 +29,14 @@ To use it on a component or tag, provide the `debounceClick` identifier.
 | --------------- | ------------------------------------------------------------------------------------- |
 | `debounceClick` | Emitted on debounce click                                                             |
 
+##### Example usage
+
+```
+<div debounceClick debounceTime="800" (debounceClick)="onDebounceClickCallback($event)">
+    Debounced click div
+</div>
+```
+
 ### Components
 #### Debounce button
 It wraps an ion-button component with a different click behaviour, based on debounce click directive. The button doesn't trigger a callback immediately on user click. The click happens after a debounce time. During this time
@@ -65,7 +73,7 @@ a scale animation on button is rendered.
 | `shape`        |                                                                                        |
 | -------------- | -------------------------------------------------------------------------------------- |
 | Description    | The button shape.                                                                      |
-| Type           | `"round" \| undefined`                                                                   |
+| Type           | `"round" \| undefined`                                                                 |
 
 ##### Events
 
@@ -86,7 +94,34 @@ a scale animation on button is rendered.
 | `--width`             | The width of the button |
 | `--min-width`         | The minimum width of the button |
 
+#### Centralizer
 
+It let the developer to centralize tags and other components horizontally and vertically. It needs a container with a specified css position; centralizer content is centralized into this container.
+
+##### Example usage
+First import `CentralizerModule` into the module of the page or componenent where the centralizer will be used.
+
+Then component can be used as a stand-alone component with an own content:
+
+```
+<div class="containerWithDefinedPosition">
+    <centralizer>
+        <div class="tagToCentralize">
+            ...
+        </div>
+    </centralizer>
+</div>
+```
+
+Or use the component as directive style:
+
+```
+<div centralizer class="centralizerContainerWithDefinedPosition">
+    <div class="tagToCentralize">
+        ...
+    </div>
+</div>
+```
 
 ## Linking and packaging instructions
 These few lines explain how to link, or publish or export as archive the ionic-angular-utilities code,
