@@ -65,13 +65,27 @@ a scale animation on button is rendered.
 | `shape`        |                                                                                        |
 | -------------- | -------------------------------------------------------------------------------------- |
 | Description    | The button shape.                                                                      |
-| Type           | `round \| undefined`                                                                   |
+| Type           | `"round" \| undefined`                                                                   |
 
 ##### Events
 
 | Name            | Description                                                                           |
 | --------------- | ------------------------------------------------------------------------------------- |
 | `debounceClick` | Emitted on debounce click                                                             |
+
+##### CSS Custom Properties
+
+| Name                  | Description                                                                           |
+| --------------------- | ------------------------------------------------------------------------------------- |
+| `--padding-left`      | Left padding if direction is left-to-right, and right padding if direction is right-to-left of the button |
+| `--padding-right`     | Right padding if direction is left-to-right, and left padding if direction is right-to-left of the button |
+| `--margin-top`        | Top margin of the button |
+| `--margin-bottom`     | Bottom margin of the button |
+| `--margin-left`       | Left margin of the button |
+| `--margin-right`      | Right margin of the button |
+| `--width`             | The width of the button |
+| `--min-width`         | The minimum width of the button |
+
 
 
 ## Linking and packaging instructions
