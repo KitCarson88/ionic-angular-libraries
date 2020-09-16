@@ -1,4 +1,4 @@
-# Ionic Angular Libraries
+# Ionic Angular Libraries (README WORK IN PROGRESS)
 
 An Angular 2+ project containing global Ionic (Angular based) libraries.
 
