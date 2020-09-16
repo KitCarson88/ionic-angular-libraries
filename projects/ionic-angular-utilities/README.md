@@ -38,15 +38,10 @@ a scale animation on button is rendered.
 
 | `color`        |                                                                                        |
 | -------------- | -------------------------------------------------------------------------------------- |
-| Description    | The color to use from your application's color palette.                                |
-|                | Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`,            |
-|                | `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`                           |
-| -------------- | -------------------------------------------------------------------------------------- |
+| Description    | The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`                           |
 | Type           | `string | undefined`                                                                   |
-| -------------- | -------------------------------------------------------------------------------------- |
-|                                                                                                         |
+
 | `cssClass`                                                                                              |
-|                                                                                                         |
 | ------------------------------------------------------------------------------------------------------- |
 | Description    | A class to assign to the component, to globally style it                               |
 | -------------- | -------------------------------------------------------------------------------------- |
