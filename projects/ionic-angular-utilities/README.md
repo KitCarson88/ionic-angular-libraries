@@ -30,6 +30,9 @@ To use it on a component or tag, provide the `debounceClick` identifier.
 | `debounceClick` | Emitted on debounce click                                                             |
 
 ##### Example usage
+First import `DebounceClickDirective` into the module declarations of the page or componenent where the centralizer will be used.
+
+Then:
 
 ```
 <div debounceClick debounceTime="800" (debounceClick)="onDebounceClickCallback($event)">
@@ -94,12 +97,23 @@ a scale animation on button is rendered.
 | `--width`             | The width of the button |
 | `--min-width`         | The minimum width of the button |
 
+##### Example usage
+First import `DebounceButtonModule` into the module imports of the page or componenent where the centralizer will be used.
+
+Then insert the component into you html source:
+
+```
+<debounce-button cssClass="globalClass" debounce="700" (debounceClick)="debounceClickCallback($event)">
+    Button content
+</debounce-button>
+```
+
 #### Centralizer
 
 It let the developer to centralize tags and other components horizontally and vertically. It needs a container with a specified css position; centralizer content is centralized into this container.
 
 ##### Example usage
-First import `CentralizerModule` into the module of the page or componenent where the centralizer will be used.
+First import `CentralizerModule` into the module imports of the page or componenent where the centralizer will be used.
 
 Then component can be used as a stand-alone component with an own content:
 
