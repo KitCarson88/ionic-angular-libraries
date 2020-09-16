@@ -1,4 +1,4 @@
-# Ionic Angular Utilities
+# Ionic Angular Utilities (README WORK IN PROGRESS)
 
 The library contains some Ionic and Angular utilities usable in a own project.
 
@@ -17,19 +17,13 @@ To use it on a component or tag, provide the `debounceClick` identifier.
 
 ##### Properties
 
-| `debounceTime`                                                                                          |
-| ------------------------------------------------------------------------------------------------------- |
+| `debounceTime` |                                                                                        |
+| -------------- | -------------------------------------------------------------------------------------- |
 | Description    | Time to debounce specified as milliseconds                                             |
 | -------------- | -------------------------------------------------------------------------------------- |
 | Type           | `number`                                                                               |
 | -------------- | -------------------------------------------------------------------------------------- |
 | Default        | `500`                                                                                  |
-
-| `debounceTime` ||
-|-|
-| Description | Time to debounce specified as milliseconds |
-| Type | `number` |
-| Default | `500` |
 
 ##### Events
 
