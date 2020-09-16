@@ -1,8 +1,8 @@
 .error {
     text-align: var(--align, center);
     width: var(--width, 100%);
-    padding-left: var(--padding-start, 0);
-    padding-right: var(--padding-end, 0);
+    padding-left: var(--padding-left, 0);
+    padding-right: var(--padding-right, 0);
     padding-top: var(--padding-top, 0);
     padding-bottom: var(--padding-bottom, 0);
 
