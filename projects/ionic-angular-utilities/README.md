@@ -88,8 +88,8 @@ a scale animation on button is rendered.
 
 | Name                  | Description                                                                           |
 | --------------------- | ------------------------------------------------------------------------------------- |
-| `--padding-left`      | Left padding if direction is left-to-right, and right padding if direction is right-to-left of the button |
-| `--padding-right`     | Right padding if direction is left-to-right, and left padding if direction is right-to-left of the button |
+| `--button-padding-start`| Left padding if direction is left-to-right, and right padding if direction is right-to-left of the button |
+| `--button-padding-end` | Right padding if direction is left-to-right, and left padding if direction is right-to-left of the button |
 | `--margin-top`        | Top margin of the button |
 | `--margin-bottom`     | Bottom margin of the button |
 | `--margin-left`       | Left margin of the button |
@@ -136,6 +136,75 @@ Or use the component as directive style:
     </div>
 </div>
 ```
+
+#### Error Container
+
+Its a container that shows and error message and optionally a retry button with a own callback. It's provided for that situations in which an api call should be relanched by user after a previous error. It's used in `ws-data` and `ws-data-list` components (see below).
+
+##### Properties
+
+| `message`      |                                                                                        |
+| -------------- | -------------------------------------------------------------------------------------- |
+| Description    | The error message to show                                                              |
+| Type           | `string \| undefined`                                                                  |
+
+| `retryButtonColor`      |                                                                                        |
+| -------------- | -------------------------------------------------------------------------------------- |
+| Description    | The color to use from your application's color palette. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`    |
+| Type           | `string \| undefined`                                                                  |
+
+
+| `retryButtonFill`      |                                                                                        |
+| -------------- | -------------------------------------------------------------------------------------- |
+| Description    | Set to `"clear"` for a transparent button, to `"outline"` for a transparent button with a border, or to `"solid"`.  |
+| Type           | `"clear" \| "outline" \| "solid" \| undefined`         |
+
+| `retryButtonLabel`      |                                                                               |
+| -------------- | -------------------------------------------------------------------------------------- |
+| Description    | The button content label. If setted, the retry button will be shown                    |
+| Type           | `string \| undefined`                                                                  |
+
+
+| `retryButtonShape`      |                                                                               |
+| -------------- | -------------------------------------------------------------------------------------- |
+| Description    | The button shape.                                                               |
+| Type           | `"round" \| undefined`                                                                  |
+
+##### Events
+
+| Name            | Description                                                                           |
+| --------------- | ------------------------------------------------------------------------------------- |
+| `reload`        | Emitted on retry button click                                                         |
+
+##### CSS Custom Properties
+
+| Name                  | Description                                                                           |
+| --------------------- | ------------------------------------------------------------------------------------- |
+| `--align`             | Inner components align  |
+| `--padding-left`      | Left padding of the component |
+| `--padding-right`     | Right padding of the component |
+| `--padding-top`       | Top padding of the component |
+| `--padding-bottom`    | Bottom padding of the component |
+| `--width`             | The width of the component |
+| `--message-align`     | Inner message align |
+| `--message-font-size` | Inner message font size |
+| `--message-font-weight` | Inner message font weight |
+| `--message-color`     | Inner message color |
+| `--message-margin-bottom`     | Inner message margin bottom |
+| `--button-width`     | Inner button width |
+| `--button-height`     | Inner button height |
+
+##### Example usage
+First import `ErrorContainerModule` into the module imports of the page or componenent where the centralizer will be used.
+
+Then:
+
+```
+<error-container message="An error occured" retryButtonLabel="Retry">
+</error-container>
+```
+
+The container admits also a custom definition of its inner parts. It's useful in cases of other error-container sorrounding components.
 
 ## Linking and packaging instructions
 These few lines explain how to link, or publish or export as archive the ionic-angular-utilities code,
