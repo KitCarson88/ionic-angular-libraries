@@ -17,7 +17,7 @@ To use it on a component or tag, provide the `debounceClick` identifier.
 
 ##### Properties
 
-| `debounceTime`                                                                                         ||
+| `debounceTime`                                                                                          |
 | ------------------------------------------------------------------------------------------------------- |
 | Description    | Time to debounce specified as milliseconds                                             |
 | -------------- | -------------------------------------------------------------------------------------- |
@@ -38,8 +38,8 @@ a scale animation on button is rendered.
 
 ##### Properties
 
-|                                                                                                         \
-| `color`                                                                                                 \
+|                                                                                                         |
+| `color`                                                                                                 |
 |                                                                                                         |
 | ------------------------------------------------------------------------------------------------------- |
 | Description    | The color to use from your application's color palette.                                |
