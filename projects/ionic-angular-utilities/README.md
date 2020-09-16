@@ -36,10 +36,8 @@ a scale animation on button is rendered.
 
 ##### Properties
 
-|                                                                                                         |
-| `color`                                                                                                 |
-|                                                                                                         |
-| ------------------------------------------------------------------------------------------------------- |
+| `color`        |                                                                                        |
+| -------------- | -------------------------------------------------------------------------------------- |
 | Description    | The color to use from your application's color palette.                                |
 |                | Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`,            |
 |                | `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`                           |
