@@ -17,7 +17,7 @@ To use it on a component or tag, provide the `debounceClick` identifier.
 
 ##### Properties
 
-| `debounceTime`                                                                                          |
+| Parameter      | `debounceTime`                                                                         |
 | -------------- | -------------------------------------------------------------------------------------- |
 | Description    | Time to debounce specified as milliseconds                                             |
 | -------------- | -------------------------------------------------------------------------------------- |
