@@ -1,4 +1,4 @@
-# Ionic Angular Utilities
+# [Ionic Angular Utilities](https://github.com/KitCarson88/ionic-angular-libraries/tree/master/projects/ionic-angular-utilities)
 
 The library contains some Ionic and Angular utilities usable in a own project.
 
