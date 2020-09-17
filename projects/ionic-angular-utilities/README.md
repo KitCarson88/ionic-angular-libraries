@@ -1,4 +1,4 @@
-# Ionic Angular Utilities (README WORK IN PROGRESS)
+# Ionic Angular Utilities
 
 The library contains some Ionic and Angular utilities usable in a own project.
 
@@ -334,7 +334,7 @@ It let the developer to visualize data that will be available in the future (suc
 
 ##### Example usage
 
-Please refer to ..... repository as example for `ws-data` component usage.
+Please refer to [Ionic Angular Template](https://kitcarson88.github.io/ionic-angular-template/) repository as example for `ws-data` component usage.
 
 #### Ws Data List
 Really similar to previous Ws Data component, it let the developer to visualize array data that will be available in the future (such as web service data available only after a call over http). It wraps previous described spinner and error-container components to show a loading spinner during waiting data state, and to show an error message when an error occurs during data retrieve. It uses rxjs Observables to trace these loading, error and data available states. It's a good practice to bind these states to a Redux substate.
@@ -403,7 +403,7 @@ In addition it expose also these parameters:
 
 ##### Example usage
 
-Please refer to ..... repository as example for `ws-data-list` component usage.
+Please refer to [Ionic Angular Template](https://kitcarson88.github.io/ionic-angular-template/) repository as example for `ws-data-list` component usage.
 
 ### Styles
 The library defines some global styles utilities into `styles` directory that can be imported from scss files of a project. There are some classes and facility mixins relative to fonts, layout, and responsiveness topics, and also a source scss with some ionic override rules.
@@ -416,7 +416,7 @@ To import them in a Ionic project .scss file, simply add an `@import` statement:
 @import '~ionic-angular-utilities/lib/styles/responsive';
 ```
 
-Please refer to ..... repository for a complete integration and global styling.
+Please refer to [Ionic Angular Template](https://kitcarson88.github.io/ionic-angular-template/) repository for a complete integration and global styling.
 
 ### Ionic Native mocks
 During a Ionic app development with `ionic serve` web execution all specific to platform Cordova plugins are unavailable. So, to ease the development with this type of dev execution, all `@ionic-native` wrappers of Cordova plugins should be mocked, to simulate the plugin behaviour.
@@ -470,7 +470,7 @@ import{ getDevice, IonicAngularUtilitiesModule } from 'ionic-angular-utilities';
     ...
     providers: [
         ...
-        { provide: HTTP, useClass: getHTTP() },
+        { provide: Device, useClass: getDevice() },
         ...
     ]
     ...
