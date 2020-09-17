@@ -40,7 +40,7 @@ export const LibConfigService = new InjectionToken<LibConfig>('LibConfig');
 })
 export class IonicAngularUtilitiesModule
 {
-  static forRoot(config?: LibConfig): ModuleWithProviders {
+  static forRoot(config?: LibConfig): ModuleWithProviders<IonicAngularUtilitiesModule> {
     return {
       ngModule: IonicAngularUtilitiesModule,
       providers: [
