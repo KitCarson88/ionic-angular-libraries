@@ -4,7 +4,7 @@ An Angular 2+ project containing global Ionic (Angular based) libraries.
 
 ## Available libraries
 
-- Ionic Angular Utilities: a library containing directives, components, styles and other ionic development utilities.
+- [Ionic Angular Utilities](https://kitcarson88.github.io/ionic-angular-libraries/UTILITIES): a library containing directives, components, styles and other ionic development utilities.
 
 ## Angular utilities to create library project and single libraries
 
