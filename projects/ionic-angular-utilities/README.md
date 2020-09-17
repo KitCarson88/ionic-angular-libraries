@@ -90,10 +90,10 @@ a scale animation on button is rendered.
 | --------------------- | ------------------------------------------------------------------------------------- |
 | `--button-padding-start`| Left padding if direction is left-to-right, and right padding if direction is right-to-left of the button |
 | `--button-padding-end` | Right padding if direction is left-to-right, and left padding if direction is right-to-left of the button |
-| `--margin-top`        | Top margin of the button |
 | `--margin-bottom`     | Bottom margin of the button |
 | `--margin-left`       | Left margin of the button |
 | `--margin-right`      | Right margin of the button |
+| `--margin-top`        | Top margin of the button |
 | `--width`             | The width of the button |
 | `--min-width`         | The minimum width of the button |
 
@@ -191,7 +191,7 @@ Its a container that shows and error message and optionally a retry button with 
 | `--message-font-weight` | Inner message font weight |
 | `--message-color`     | Inner message color |
 | `--message-margin-bottom`     | Inner message margin bottom |
-| `--button-width`     | Inner button width |
+| `--button-width`      | Inner button width |
 | `--button-height`     | Inner button height |
 
 ##### Example usage
@@ -244,6 +244,238 @@ Then:
 ```
 
 The container admits also a custom definition of its inner parts. It's useful in cases of other error-container sorrounding components.
+
+#### Ws Data
+It let the developer to visualize data that will be available in the future (such as web service data available only after a call over http). It wraps previous described spinner and error-container components to show a loading spinner during waiting data state, and to show an error message when an error occurs during data retrieve. It uses rxjs Observables to trace these loading and error states. It's a good practice to bind these states to a Redux substate.
+
+##### Properties
+
+| `options` |   |
+| --- | --- | 
+| Description | The component configuration options |
+| Type | `WsDataOptions` |
+
+##### `WsDataOptions`
+
+| `error$` |   |
+| --- | --- |
+| Description | Error state tracing rxjs Observable |
+| Type | `Observable<any>` |
+
+| `errorMessage` |   |
+| --- | --- |
+| Description | The error message to show when the data retrieve ends unsuccessfully |
+| Type | `string \| undefined` |
+
+| `errorRetryButtonColor` |   |
+| --- | --- |
+| Description | The color to use from your application's color palette. It defines retry button color. Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"` |
+| Type | `string \| undefined` |
+
+| `errorRetryButtonFill` |   |
+| --- | --- |
+| Description | Set to `"clear"` for a transparent retry button, to `"outline"` for a transparent retry button with a border, or to `"solid"`. |
+| Type | `"clear" \| "outline" \| "solid" \| undefined` |
+
+| `errorRetryButtonLabel` |   |
+| --- | --- |
+| Description | The retry button label |
+| Type | `string \| undefined` |
+
+| `errorRetryButtonShape` |   |
+| --- | --- |
+| Description | The button shape. |
+| Type | `"round" \| undefined` |
+
+| `loading$` |   |
+| --- | --- |
+| Description | Loading state tracing rxjs Observable |
+| Type | `Observable<boolean>` |
+
+| `loadingSpinnerWithContainer` |   |
+| --- | --- |
+| Description | It defines if the loading spinner should have an own container or not |
+| Type | `boolean \| undefined` |
+
+| `loadingSpinnerName`   |                                                                  |
+| -------------- | -------------------------------------------------------------------------------------- |
+| Description    | The spinner type name                                                            |
+| Type           | `"rotatingSquare" \| "chasingDot" \| "doubleBouncingDot" \| "stretchingBars" \| "chasingSquares" \| "scalingDot" \| "doubleRotatingDot" \| "threeBouncingDots" \| "rotatingDotCircle" \| "fadingSquare" \| "simpleSpinner" \| "foldingSquare" \| undefined`                      |
+
+##### Events
+
+| Name            | Description                                                                           |
+| --------------- | ------------------------------------------------------------------------------------- |
+| `retry`         | Emitted on error container retry button click        |
+
+##### CSS Custom Properties
+
+| Name                  | Description                                                                           |
+| --------------------- | ---------------------------------------- |
+| `--spinner-content-background`| Loading spinner container background |
+| `--spinner-z-index`| Loading spinner container z index |
+| `--spinner-size`| Loading spinner size |
+| `--spinner-color`| Loading spinner color |
+| `--spinner-element-size`| Loading spinner inner element size |
+| `--spinner-element-margin`| Loading spinner inner element margin (used only on some spinner types) |
+| `--error-container-width`   | The width of the error-container component |
+| `--error-container-align`   | error-container inner components align  |
+| `--error-container-padding-left`      | Left padding of the error-container |
+| `--error-container-padding-right`     | Right padding of the error-container |
+| `--error-container-padding-top`       | Top padding of the error-container |
+| `--error-container-padding-bottom`    | Bottom padding of the error-container |
+| `--error-container-message-align`     | error-container inner message align |
+| `--error-container-message-font-size` | error-container inner message font size |
+| `--error-container-message-font-weight` | error-container inner message font weight |
+| `--error-container-message-color`     | error-container inner message color |
+| `--error-container-message-margin-bottom`     | error-container inner message margin bottom |
+| `--error-container-button-width`      | error-container inner button width |
+| `--error-container-button-height`     | error-container inner button height |
+
+##### Example usage
+
+Please refer to ..... repository as example for `ws-data` component usage.
+
+#### Ws Data List
+Really similar to previous Ws Data component, it let the developer to visualize array data that will be available in the future (such as web service data available only after a call over http). It wraps previous described spinner and error-container components to show a loading spinner during waiting data state, and to show an error message when an error occurs during data retrieve. It uses rxjs Observables to trace these loading, error and data available states. It's a good practice to bind these states to a Redux substate.
+
+##### Properties
+
+| `options` |   |
+| --- | --- | 
+| Description | The component configuration options |
+| Type | `WsDataListOptions` |
+
+##### `WsDataListOptions`
+
+The interface extends WsDataOptions and all its data are available on ws-data-list component too.
+In addition it expose also these parameters:
+
+| `data$` |   |
+| --- | --- |
+| Description | When available it holds data retrieved |
+| Type | `Observable<any>` |
+
+| `dataAvailableCondition` |   |
+| --- | --- |
+| Description | Data available state tracing |
+| Type | `boolean \| Observable<boolean>` |
+
+| `dataItemTemplate` |   |
+| --- | --- |
+| Description | Array item template to use for each one when data will be available |
+| Type | `any` |
+
+| `emptyListMessage` |   |
+| --- | --- |
+| Description | A message to show when data retrieved is an empty list |
+| Type | `string` |
+
+##### Events
+
+| Name            | Description                                                                           |
+| --------------- | ------------------------------------------------------------------------------------- |
+| `retry`         | Emitted on error container retry button click        |
+
+##### CSS Custom Properties
+
+| Name                  | Description                                                                           |
+| --------------------- | ---------------------------------------- |
+| `--spinner-content-background`| Loading spinner container background |
+| `--spinner-z-index`| Loading spinner container z index |
+| `--spinner-size`| Loading spinner size |
+| `--spinner-color`| Loading spinner color |
+| `--spinner-element-size`| Loading spinner inner element size |
+| `--spinner-element-margin`| Loading spinner inner element margin (used only on some spinner types) |
+| `--error-container-width`   | The width of the error-container component |
+| `--error-container-align`   | error-container inner components align  |
+| `--error-container-padding-left`      | Left padding of the error-container |
+| `--error-container-padding-right`     | Right padding of the error-container |
+| `--error-container-padding-top`       | Top padding of the error-container |
+| `--error-container-padding-bottom`    | Bottom padding of the error-container |
+| `--error-container-message-align`     | error-container inner message align |
+| `--error-container-message-font-size` | error-container inner message font size |
+| `--error-container-message-font-weight` | error-container inner message font weight |
+| `--error-container-message-color`     | error-container inner message color |
+| `--error-container-message-margin-bottom`     | error-container inner message margin bottom |
+| `--error-container-button-width`      | error-container inner button width |
+| `--error-container-button-height`     | error-container inner button height |
+
+##### Example usage
+
+Please refer to ..... repository as example for `ws-data-list` component usage.
+
+### Styles
+The library defines some global styles utilities into `styles` directory that can be imported from scss files of a project. There are some classes and facility mixins relative to fonts, layout, and responsiveness topics, and also a source scss with some ionic override rules.
+
+To import them in a Ionic project .scss file, simply add an `@import` statement:
+
+```
+@import '~ionic-angular-utilities/lib/styles/override-ionic';
+@import '~ionic-angular-utilities/lib/styles/mixins';
+@import '~ionic-angular-utilities/lib/styles/responsive';
+```
+
+Please refer to ..... repository for a complete integration and global styling.
+
+### Ionic Native mocks
+During a Ionic app development with `ionic serve` web execution all specific to platform Cordova plugins are unavailable. So, to ease the development with this type of dev execution, all `@ionic-native` wrappers of Cordova plugins should be mocked, to simulate the plugin behaviour.
+The repository includes some of these wrapper mocks importable into the app module of the application.
+Some of them are configurable with some values to use when they can't be retrieved from a web environment.
+
+To import a simple mock without parameter such as the `@ionic-native/http` mock wrappaer (normally based on `cordova-plugin-advanced-http`) in the app module providers add a line like:
+
+```
+...
+import { HTTP } from '@ionic-native/http/ngx';
+import{ getHTTP } from 'ionic-angular-utilities';
+...
+...
+    providers: [
+        ...
+        { provide: HTTP, useClass: getHTTP() },
+        ...
+    ]
+...
+```
+
+To configure a mock provider, you can provide mock desired mock values into library import in the app module in this way (example based on `@ionic-native/device` wrapper):
+
+```
+...
+import { Device } from '@ionic-native/device/ngx';
+import{ getDevice, IonicAngularUtilitiesModule } from 'ionic-angular-utilities';
+...
+    ...
+    imports: [
+        ...
+        IonicAngularUtilitiesModule.forRoot({
+            ionicMock: {
+                ...
+                device: {
+                    cordova: 'not available',
+                    isVirtual: false,
+                    manufacturer: 'not available',
+                    model: 'not available',
+                    platform: 'web',
+                    serial: 'not available',
+                    uuid: 'not available',
+                    version: 'not available'
+                },
+                ...
+            }
+        }),
+        ...
+    ]
+    ...
+    providers: [
+        ...
+        { provide: HTTP, useClass: getHTTP() },
+        ...
+    ]
+    ...
+...
+```
 
 ## Linking and packaging instructions
 These few lines explain how to link, or publish or export as archive the ionic-angular-utilities code,

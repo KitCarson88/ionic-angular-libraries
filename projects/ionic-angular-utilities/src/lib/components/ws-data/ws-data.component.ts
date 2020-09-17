@@ -10,7 +10,7 @@ import { WsDataOptions } from '../../entities/ws-data-options';
 export class WsDataComponent
 {
   @Input()
-  options?: WsDataOptions;
+  options: WsDataOptions;
 
   @Output()
   retry? = new EventEmitter();

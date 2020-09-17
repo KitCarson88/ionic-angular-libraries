@@ -5,7 +5,7 @@ export interface WsDataOptions {
     loadingSpinnerWithContainer?: boolean;
     loadingSpinnerName?: 'rotatingSquare' | 'chasingDot' | 'doubleBouncingDot' | 'stretchingBars' | 'chasingSquares' | 'scalingDot' | 'doubleRotatingDot' | 'threeBouncingDots' | 'rotatingDotCircle' | 'fadingSquare' | 'simpleSpinner' | 'foldingSquare';
     error$: Observable<any>;
-    errorMessage: string;
+    errorMessage?: string;
     errorRetryButtonLabel?: string;
     errorRetryButtonFill?: 'clear' | 'outline' | 'solid';
     errorRetryButtonShape?: 'round';
