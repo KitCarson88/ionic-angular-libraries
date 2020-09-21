@@ -98,9 +98,10 @@ a scale animation on button is rendered.
 | `--min-width`         | The minimum width of the button |
 
 ##### Example usage
-First import `DebounceButtonModule` into the module imports of the page or componenent where the centralizer will be used.
+First import `BrowserAnimationsModule` into the app module of the project (its a module of `@angular/platform-browser/animations` package).
+Then import `DebounceButtonModule` into the module imports of the page or componenent where the centralizer will be used.
 
-Then insert the component into you html source:
+Finally insert the component into you html source:
 
 ```
 <debounce-button cssClass="globalClass" debounce="700" (debounceClick)="debounceClickCallback($event)">
