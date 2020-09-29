@@ -34,7 +34,7 @@ ion-content {
 .rotating-square {
     width: var(--size, 40px);
     height: var(--size, 40px);
-    background-color: var(--color, #333);
+    background-color: var(--element-color, #333);
 
     -webkit-animation: rotate-square 1.2s infinite ease-in-out;
     animation: rotate-square 1.2s infinite ease-in-out;
@@ -101,7 +101,7 @@ ion-content {
             display: block;
             width: var(--element-size, 10px);
             height: var(--element-size, 10px);
-            background-color: var(--color, #000);;
+            background-color: var(--element-color, #000);;
             border-radius: 100%;
             @include animation(chase-dot-before 2.0s infinite ease-in-out both);
 
@@ -142,7 +142,7 @@ ion-content {
         width: 100%;
         height: 100%;
         border-radius: 50%;
-        background-color: var(--color, #333);;
+        background-color: var(--element-color, #333);;
         opacity: 0.6;
         position: absolute;
         top: 0;
@@ -181,7 +181,7 @@ ion-content {
     text-align: center;
 
     & > div {
-        background-color: var(--color, #333);;
+        background-color: var(--element-color, #333);;
         height: 100%;
         width: var(--element-size, 6px);
         margin-right: var(--element-margin, 1px);
@@ -245,7 +245,7 @@ ion-content {
     position: relative;
     
     &__square1, &__square2 {
-        background-color: var(--color, #333);
+        background-color: var(--element-color, #333);
         width: var(--element-size, 15px);
         height: var(--element-size, 15px);
         position: absolute;
@@ -285,7 +285,7 @@ ion-content {
 .scaling-dot {
     width: var(--size, 40px);
     height: var(--size, 40px);
-    background-color: var(--color, #333);
+    background-color: var(--element-color, #333);
   
     border-radius: 100%;  
     -webkit-animation: scaleout 1.0s infinite ease-in-out;
@@ -311,7 +311,7 @@ ion-content {
         display: inline-block;
         position: absolute;
         top: 0;
-        background-color: var(--color, #333);
+        background-color: var(--element-color, #333);
         border-radius: 100%;
     
         -webkit-animation: bounce 2.0s infinite ease-in-out;
@@ -348,7 +348,7 @@ ion-content {
     text-align: center;
     
     & > div {
-        background-color: var(--color, #333);
+        background-color: var(--element-color, #333);
         display: inline-block;
         width: var(--element-size, 18px);
         height: var(--element-size, 18px);
@@ -412,7 +412,7 @@ ion-content {
             margin: 0 auto;
             width: var(--element-size, 15%);
             height: var(--element-size, 15%);
-            background-color: var(--color, #333);
+            background-color: var(--element-color, #333);
             border-radius: 100%;
             -webkit-animation: circle-bounce 1.2s infinite ease-in-out both;
             animation: circle-bounce 1.2s infinite ease-in-out both;
@@ -562,7 +562,7 @@ ion-content {
     & > div {
         width: var(--element-size, 33%);
         height: var(--element-size, 33%);
-        background-color: var(--color, #333);
+        background-color: var(--element-color, #333);
         float: left;
         -webkit-animation: square-scale 1.3s infinite ease-in-out;
         animation: square-scale 1.3s infinite ease-in-out; 
@@ -635,7 +635,7 @@ ion-content {
             margin: 0 auto;
             width: var(--element-size, 15%);
             height: var(--element-size, 15%);
-            background-color: var(--color, #333);
+            background-color: var(--element-color, #333);
             border-radius: 100%;
             -webkit-animation: spinner-rotation 1.2s infinite ease-in-out both;
             animation: spinner-rotation 1.2s infinite ease-in-out both;
@@ -810,7 +810,7 @@ ion-content {
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: var(--color, #333);
+            background-color: var(--element-color, #333);
             -webkit-animation: fold 2.4s infinite linear both;
             animation: fold 2.4s infinite linear both;
             -webkit-transform-origin: 100% 100%;

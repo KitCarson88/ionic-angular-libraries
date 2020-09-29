@@ -15,7 +15,8 @@
     "link": "cd dist/ionic-angular-utilities && npm link && cd ../../..",
     "pack": "cd dist/ionic-angular-utilities && npm pack && cd ../../..",
     "build-link": "npm run build && npm run link",
-    "build-pack": "npm run build && npm run pack"
+    "build-pack": "npm run build && npm run pack",
+    "build-ionic-angular-utilities-watch": "ng build ionic-angular-utilities --watch"
   },
   "private": true,
   "dependencies": {

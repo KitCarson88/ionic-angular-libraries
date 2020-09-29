@@ -230,7 +230,7 @@ A loading custom component with some spinner types usable only specifing their n
 | `--content-background`| Sorround ion-content background  |
 | `--content-z-index`   | Sorround ion-content z-index |
 | `--size`              | Spinner size |
-| `--color`             | Spinner color |
+| `--elment-color`      | Spinner color |
 | `--element-size`      | Inner spinner single component size. For example, on `"chasingDot"`spinner, it defines the size of each single dot |
 | `--element-margin`    | Inner spinner single element margin. In some spinners like `"stretchingBars"`, it defines a lateral margin among single inner elements |
 
@@ -316,7 +316,7 @@ It let the developer to visualize data that will be available in the future (suc
 | `--spinner-content-background`| Loading spinner container background |
 | `--spinner-z-index`| Loading spinner container z index |
 | `--spinner-size`| Loading spinner size |
-| `--spinner-color`| Loading spinner color |
+| `--spinner-element-color`| Loading spinner color |
 | `--spinner-element-size`| Loading spinner inner element size |
 | `--spinner-element-margin`| Loading spinner inner element margin (used only on some spinner types) |
 | `--error-container-width`   | The width of the error-container component |
@@ -385,7 +385,7 @@ In addition it expose also these parameters:
 | `--spinner-content-background`| Loading spinner container background |
 | `--spinner-z-index`| Loading spinner container z index |
 | `--spinner-size`| Loading spinner size |
-| `--spinner-color`| Loading spinner color |
+| `--spinner-element-color`| Loading spinner color |
 | `--spinner-element-size`| Loading spinner inner element size |
 | `--spinner-element-margin`| Loading spinner inner element margin (used only on some spinner types) |
 | `--error-container-width`   | The width of the error-container component |
@@ -487,6 +487,8 @@ From the main ionic-angular-libraries directory go with a terminal into dist/ion
     cd dist/ionic-angular-utilities
     npm link
 
+(package.json has a shortcut to build and link all internal libraries. From the main library project directory, run the command: npm run build-link)
+
 Now inside your project, you can simply link it with the command:
     npm link ionic-angular-utilities
 
@@ -519,6 +521,8 @@ To unlink the app use the npm unlink command:
 From the main ionic-angular-libraries directory go with a terminal into dist/ionic-angular-utilities and pack the library with related npm command:
     cd dist/ionic-angular-utilities
     npm pack
+
+(package.json has a shortcut to build and pack all internal libraries. From the main library project directory, run the command: npm run build-pack)
 
 Into the same direcotory an ionic-angular-utilities tgz file was created (the name contains also the current version of the library taken from its package.json). Put this archive in any folder of your computer (also in the main directory of your project).
 
