@@ -1,6 +1,6 @@
 {
   "name": "ionic-angular-utilities",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/KitCarson88/ionic-angular-libraries.git"
@@ -25,6 +25,7 @@
     "@ionic-native/core": "^5.28.0",
     "@ionic-native/deeplinks": "^5.28.0",
     "@ionic-native/device": "^5.28.0",
+    "@ionic-native/diagnostic": "^5.28.0",
     "@ionic-native/http": "^5.28.0",
     "@ionic-native/media": "^5.28.0",
     "@ionic-native/native-audio": "^5.28.0",
@@ -43,6 +44,7 @@
     "@ionic-native/core",
     "@ionic-native/deeplinks",
     "@ionic-native/device",
+    "@ionic-native/diagnostic",
     "@ionic-native/http",
     "@ionic-native/media",
     "@ionic-native/native-audio",

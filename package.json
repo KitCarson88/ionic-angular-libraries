@@ -34,6 +34,7 @@
     "@ionic-native/core": "^5.28.0",
     "@ionic-native/deeplinks": "^5.28.0",
     "@ionic-native/device": "^5.28.0",
+    "@ionic-native/diagnostic": "^5.28.0",
     "@ionic-native/http": "^5.28.0",
     "@ionic-native/media": "^5.28.0",
     "@ionic-native/native-audio": "^5.28.0",

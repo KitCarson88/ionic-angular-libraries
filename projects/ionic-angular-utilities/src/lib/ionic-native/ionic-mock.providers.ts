@@ -4,17 +4,18 @@ import { Observable } from 'rxjs';
 
 import { LibConfigService, LibConfig } from '../ionic-angular-utilities.module';
 
-import { AppVersion } from '@ionic-native/app-version/ngx';
-import { Device } from '@ionic-native/device/ngx';
-import { HTTP } from '@ionic-native/http/ngx';
-import { Media } from '@ionic-native/media/ngx';
-import { NativeStorage } from '@ionic-native/native-storage/ngx';
-import { StatusBar } from '@ionic-native/status-bar/ngx';
-import { NavigationBar } from '@ionic-native/navigation-bar/ngx';
 import { Admob } from '@ionic-native/admob/ngx';
 import { AndroidFullScreen } from '@ionic-native/android-full-screen/ngx';
-import { NativeAudio } from '@ionic-native/native-audio/ngx';
+import { AppVersion } from '@ionic-native/app-version/ngx';
 import { Deeplinks } from '@ionic-native/deeplinks/ngx';
+import { Device } from '@ionic-native/device/ngx';
+import { Diagnostic } from '@ionic-native/diagnostic/ngx';
+import { HTTP } from '@ionic-native/http/ngx';
+import { Media } from '@ionic-native/media/ngx';
+import { NativeAudio } from '@ionic-native/native-audio/ngx';
+import { NativeStorage } from '@ionic-native/native-storage/ngx';
+import { NavigationBar } from '@ionic-native/navigation-bar/ngx';
+import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 ////////////////////Mock providers
 @Injectable()
@@ -25,6 +26,45 @@ class Mock
     protected isMockAvailable(mock: string)
     {
         return this.config && this.config.ionicMock && this.config.ionicMock[ mock ];
+    }
+}
+
+@Injectable()
+export class AdmobMock
+{
+    setOptions(option: any): Promise<any>
+    {
+        return new Promise((resolve, reject) => {
+            resolve();
+        });
+    }
+}
+
+@Injectable()
+export class AndroidFullScreenMock
+{
+    isImmersiveModeSupported(): Promise<void>
+    {
+        return new Promise((resolve, rejcet) =>
+        {
+            resolve();
+        });
+    }
+
+    immersiveMode(): Promise<void>
+    {
+        return new Promise((resolve, rejcet) =>
+        {
+            resolve();
+        });
+    }
+
+    leanMode(): Promise<void>
+    {
+        return new Promise((resolve, rejcet) =>
+        {
+            resolve();
+        });
     }
 }
 
@@ -77,6 +117,15 @@ export class AppVersionMock extends Mock
 }
 
 @Injectable()
+export class DeeplinksMock
+{
+    route(paths: any): Observable<any>
+    {
+        return new Observable();
+    }
+}
+
+@Injectable()
 export class DeviceMock extends Mock
 {
     cordova: string = this.isMockAvailable('device') && this.config.ionicMock.device.cordova ? this.config.ionicMock.device.cordova : "browser";
@@ -90,38 +139,46 @@ export class DeviceMock extends Mock
 }
 
 @Injectable()
-export class MediaMock
-{
-
-}
-
-@Injectable()
-export class NativeStorageMock
-{
-    setItem(reference: string, value: any): Promise<any>
-    {
-        localStorage.setItem(reference, value);
-        return new Promise((resolve, reject) =>
-        {
-            resolve({});
+export class DiagnosticMock {
+    isCameraPresent(): Promise<any> {
+        return new Promise((resolve, reject) => {
+            resolve(true);
         });
     }
 
-    getItem(reference: string): Promise<any>
-    {
-        let value = localStorage.getItem(reference);
-        return new Promise((resolve, reject) =>
-        {
-            resolve(value);
+    isCameraAuthorized(): Promise<any> {
+        return new Promise((resolve, reject) => {
+            resolve(true);
         });
     }
 
-    remove(reference: string): Promise<any>
-    {
-        localStorage.removeItem(reference);
-        return new Promise((resolve, reject) =>
-        {
-            resolve({});
+    isLocationEnabled(): Promise<any> {
+        return new Promise((resolve, reject) => {
+            resolve(true);
+        });
+    }
+
+    isLocationAvailable(): Promise<any> {
+        return new Promise((resolve, reject) => {
+            resolve(true);
+        });
+    }
+
+    isLocationAuthorized(): Promise<any> {
+        return new Promise((resolve, reject) => {
+            resolve(true);
+        });
+    }
+
+    requestCameraAuthorization(): Promise<any> {
+        return new Promise((resolve, reject) => {
+            resolve("mock granted");
+        });
+    }
+
+    requestLocationAuthorization(): Promise<any> {
+        return new Promise((resolve, reject) => {
+            resolve("mock granted");
         });
     }
 }
@@ -177,60 +234,9 @@ export class HTTPMock
 }
 
 @Injectable()
-export class StatusBarMock
+export class MediaMock
 {
-    hide()
-    {
 
-    }
-}
-
-@Injectable()
-export class NavigationBarMock
-{
-    setUp(autohide?): Promise<any>
-    {
-        return new Promise((resolve, reject) =>
-        {
-            resolve({});
-        });
-    }
-
-    hideNavigationBar(): Promise<any>
-    {
-        return new Promise((resolve, reject) =>
-        {
-            resolve({});
-        });
-    }
-}
-
-@Injectable()
-export class AndroidFullScreenMock
-{
-    isImmersiveModeSupported(): Promise<void>
-    {
-        return new Promise((resolve, rejcet) =>
-        {
-            resolve();
-        });
-    }
-
-    immersiveMode(): Promise<void>
-    {
-        return new Promise((resolve, rejcet) =>
-        {
-            resolve();
-        });
-    }
-
-    leanMode(): Promise<void>
-    {
-        return new Promise((resolve, rejcet) =>
-        {
-            resolve();
-        });
-    }
 }
 
 @Injectable()
@@ -278,22 +284,62 @@ export class NativeAudioMock
 }
 
 @Injectable()
-export class AdmobMock
+export class NativeStorageMock
 {
-    setOptions(option: any): Promise<any>
+    setItem(reference: string, value: any): Promise<any>
     {
-        return new Promise((resolve, reject) => {
-            resolve();
+        localStorage.setItem(reference, value);
+        return new Promise((resolve, reject) =>
+        {
+            resolve({});
+        });
+    }
+
+    getItem(reference: string): Promise<any>
+    {
+        let value = localStorage.getItem(reference);
+        return new Promise((resolve, reject) =>
+        {
+            resolve(value);
+        });
+    }
+
+    remove(reference: string): Promise<any>
+    {
+        localStorage.removeItem(reference);
+        return new Promise((resolve, reject) =>
+        {
+            resolve({});
         });
     }
 }
 
 @Injectable()
-export class DeeplinksMock
+export class NavigationBarMock
 {
-    route(paths: any): Observable<any>
+    setUp(autohide?): Promise<any>
     {
-        return new Observable();
+        return new Promise((resolve, reject) =>
+        {
+            resolve({});
+        });
+    }
+
+    hideNavigationBar(): Promise<any>
+    {
+        return new Promise((resolve, reject) =>
+        {
+            resolve({});
+        });
+    }
+}
+
+@Injectable()
+export class StatusBarMock
+{
+    hide()
+    {
+
     }
 }
 
@@ -304,17 +350,28 @@ export function hasCordova(): boolean
 }
 
 /////////////////////Providers getters
+export function getAdmob(): any
+{
+    return hasCordova() ? Admob : AdmobMock;
+}
+export function getAndroidFullScreen(): any
+{
+    return hasCordova() ? AndroidFullScreen : AndroidFullScreenMock;
+}
 export function getAppVersion(): any
 {
     return hasCordova() ? AppVersion : AppVersionMock;
+}
+export function getDeeplinks(): any
+{
+    return hasCordova() ? Deeplinks : DeeplinksMock;
 }
 export function getDevice(): any
 {
     return hasCordova() ? Device : DeviceMock;
 }
-export function getNativeStorage(): any
-{
-    return hasCordova() ? NativeStorage : NativeStorageMock;
+export function getDiagnostic(): any {
+    return hasCordova()? Diagnostic : DiagnosticMock;
 }
 export function getHTTP(): any
 {
@@ -324,28 +381,19 @@ export function getMedia(): any
 {
     return hasCordova() ? Media : MediaMock;
 }
-export function getStatusBar(): any
+export function getNativeAudio(): any
 {
-    return hasCordova() ? StatusBar : StatusBarMock;
+    return hasCordova() ? NativeAudio : NativeAudioMock;
+}
+export function getNativeStorage(): any
+{
+    return hasCordova() ? NativeStorage : NativeStorageMock;
 }
 export function getNavigationBar(): any
 {
     return hasCordova() ? NavigationBar : NavigationBarMock;
 }
-export function getAndroidFullScreen(): any
+export function getStatusBar(): any
 {
-    return hasCordova() ? AndroidFullScreen : AndroidFullScreenMock;
-}
-export function getNativeAudio(): any
-{
-    return hasCordova() ? NativeAudio : NativeAudioMock;
-}
-export function getAdmob(): any
-{
-    return hasCordova() ? Admob : AdmobMock;
-}
-
-export function getDeeplinks(): any
-{
-    return hasCordova() ? Deeplinks : DeeplinksMock;
+    return hasCordova() ? StatusBar : StatusBarMock;
 }
