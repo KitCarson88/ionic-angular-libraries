@@ -20,6 +20,15 @@ export interface LibConfig {
       manufacturer?: string,
       isVirtual?: boolean,
       serial?: string,
+    },
+    diagnostic?: {
+      isCameraPresent?: any,
+      isCameraAuthorized?: any,
+      isLocationEnabled?: boolean,
+      isLocationAvailable?: any,
+      isLocationAuthorized?: any,
+      requestCameraAuthorization?: any,
+      requestLocationAuthorization?: any,
     }
   }
 }

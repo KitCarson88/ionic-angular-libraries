@@ -139,46 +139,46 @@ export class DeviceMock extends Mock
 }
 
 @Injectable()
-export class DiagnosticMock {
+export class DiagnosticMock extends Mock{
     isCameraPresent(): Promise<any> {
         return new Promise((resolve, reject) => {
-            resolve(true);
+            resolve(this.isMockAvailable('diagnostic') && this.config.ionicMock.diagnostic.isCameraPresent !== undefined && this.config.ionicMock.diagnostic.isCameraPresent !== null ? this.config.ionicMock.diagnostic.isCameraPresent : true);
         });
     }
 
     isCameraAuthorized(): Promise<any> {
         return new Promise((resolve, reject) => {
-            resolve(true);
+            resolve(this.isMockAvailable('diagnostic') && this.config.ionicMock.diagnostic.isCameraAuthorized !== undefined && this.config.ionicMock.diagnostic.isCameraAuthorized !== null ? this.config.ionicMock.diagnostic.isCameraAuthorized : true);
         });
     }
 
     isLocationEnabled(): Promise<any> {
         return new Promise((resolve, reject) => {
-            resolve(true);
+            resolve(this.isMockAvailable('diagnostic') && this.config.ionicMock.diagnostic.isLocationEnabled !== undefined && this.config.ionicMock.diagnostic.isLocationEnabled !== null ? this.config.ionicMock.diagnostic.isLocationEnabled : true);
         });
     }
 
     isLocationAvailable(): Promise<any> {
         return new Promise((resolve, reject) => {
-            resolve(true);
+            resolve(this.isMockAvailable('diagnostic') && this.config.ionicMock.diagnostic.isLocationAvailable !== undefined && this.config.ionicMock.diagnostic.isLocationAvailable !== null ? this.config.ionicMock.diagnostic.isLocationAvailable : true);
         });
     }
 
     isLocationAuthorized(): Promise<any> {
         return new Promise((resolve, reject) => {
-            resolve(true);
+            resolve(this.isMockAvailable('diagnostic') && this.config.ionicMock.diagnostic.isLocationAuthorized !== undefined && this.config.ionicMock.diagnostic.isLocationAuthorized !== null ? this.config.ionicMock.diagnostic.isLocationAuthorized : true);
         });
     }
 
     requestCameraAuthorization(): Promise<any> {
         return new Promise((resolve, reject) => {
-            resolve("mock granted");
+            resolve(this.isMockAvailable('diagnostic') && this.config.ionicMock.diagnostic.requestCameraAuthorization !== undefined && this.config.ionicMock.diagnostic.requestCameraAuthorization !== null ? this.config.ionicMock.diagnostic.requestCameraAuthorization : "mock granted");
         });
     }
 
     requestLocationAuthorization(): Promise<any> {
         return new Promise((resolve, reject) => {
-            resolve("mock granted");
+            resolve(this.isMockAvailable('diagnostic') && this.config.ionicMock.diagnostic.requestLocationAuthorization !== undefined && this.config.ionicMock.diagnostic.requestLocationAuthorization !== null ? this.config.ionicMock.diagnostic.requestLocationAuthorization : "mock granted");
         });
     }
 }
