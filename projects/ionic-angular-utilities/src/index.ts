@@ -5,11 +5,14 @@ export * from './lib/components/centralizer/centralizer.module';
 export * from './lib/components/debounce-button/debounce-button.component';
 export * from './lib/components/debounce-button/debounce-button.module';
 
-export * from './lib/components/spinner/spinner.component';
-export * from './lib/components/spinner/spinner.module';
-
 export * from './lib/components/error-container/error-container.component';
 export * from './lib/components/error-container/error-container.module';
+
+export * from './lib/components/flipper/flipper.component';
+export * from './lib/components/flipper/flipper.module';
+
+export * from './lib/components/spinner/spinner.component';
+export * from './lib/components/spinner/spinner.module';
 
 export * from './lib/components/ws-data/ws-data.component';
 export * from './lib/components/ws-data/ws-data.module';

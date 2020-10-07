@@ -1,0 +1,36 @@
+.flip-container {
+    perspective: var(--flipper-perspective, 1000px);
+
+    &.flipped .flipper {
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+    }
+    
+    .flipper {
+        transition: var(--flipper-transition-time, 0.3s);
+        transform-style: preserve-3d;
+        position: relative;
+
+        .front, .back {
+            background-color: transparent;
+            backface-visibility: hidden;
+            margin: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .front {
+            z-index: var(--front-z-index, 2);
+            transform: rotateY(0deg);
+        }
+
+        .back {
+            z-index: var(--back-z-index, 0);
+            transform: rotateY(180deg);
+        }
+    }
+}
