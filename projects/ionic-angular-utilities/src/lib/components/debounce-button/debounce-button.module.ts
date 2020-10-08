@@ -5,15 +5,16 @@ import { IonicModule } from '@ionic/angular';
 
 import { DebounceButtonComponent } from './debounce-button.component';
 
-import { DebounceClickDirective } from '../../directives/debounce-click/debounce-click.directive';
+import { DebounceClickModule } from '../../directives/debounce-click/debounce-click.module';
 
 @NgModule({
     declarations: [
-        DebounceButtonComponent, DebounceClickDirective
+        DebounceButtonComponent
     ],
     imports: [
         CommonModule,
-        IonicModule
+        IonicModule,
+        DebounceClickModule
     ],
     exports: [
         DebounceButtonComponent

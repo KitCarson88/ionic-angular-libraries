@@ -22,6 +22,7 @@ export * from './lib/components/ws-data-list/ws-data-list.module';
 
 ///////////// Directives
 export * from './lib/directives/debounce-click/debounce-click.directive';
+export * from './lib/directives/debounce-click/debounce-click.module';
 
 ///////////// Entities
 export * from './lib/entities/ws-data-options';
