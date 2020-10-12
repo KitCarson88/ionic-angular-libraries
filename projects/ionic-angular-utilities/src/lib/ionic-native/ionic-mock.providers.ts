@@ -222,6 +222,38 @@ export class HTTPMock
         });
     }
 
+    delete(endpoint: string, params?: any, header?: any)
+    {
+        return new Promise(async (resolve, reject) =>
+        {
+            try
+            {
+                let response = await this.http.delete(endpoint, { headers: header }).toPromise();
+                resolve({ data: JSON.stringify(response) });
+            }
+            catch (err)
+            {
+                reject(err);
+            }
+        });
+    }
+
+    put(endpoint: string, body?: any, header?: any)
+    {
+        return new Promise(async (resolve, reject) =>
+        {
+            try
+            {
+                let response = await this.http.put(endpoint, body, { headers: header }).toPromise();
+                resolve({ data: JSON.stringify(response) });
+            }
+            catch (err)
+            {
+                reject(err);
+            }
+        });
+    }
+
     setDataSerializer(): void
     {
 
@@ -230,6 +262,11 @@ export class HTTPMock
     setRequestTimeout(timeout: number): void
     {
         return;
+    }
+
+    setServerTrustMode(mode: string)
+    {
+
     }
 }
 
