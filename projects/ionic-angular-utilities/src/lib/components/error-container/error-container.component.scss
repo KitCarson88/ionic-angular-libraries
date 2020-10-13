@@ -20,4 +20,9 @@
         width: var(--button-width) !important;
         height: var(--button-height) !important;
     }
+
+    &__button-text {
+        font-size: var(--button-text-font-size) !important;
+        font-weight: var(--button-text-font-weight) !important;
+    }
 }

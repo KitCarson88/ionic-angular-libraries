@@ -3,6 +3,6 @@
 <div class="error" *ngIf="ref.childNodes.length == 0">
   <span class="error__message" [innerHtml]="message"></span>
   <ion-button class="error__button" [fill]="buttonFill" [shape]="buttonShape" [color]="buttonColor" *ngIf="buttonLabel && buttonLabel.length" (click)="reload.emit()">
-    <span>{{buttonLabel}}</span>
+    <span class="error__button-text">{{buttonLabel}}</span>
   </ion-button>
 </div>
