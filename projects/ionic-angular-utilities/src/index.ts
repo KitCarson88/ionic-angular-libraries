@@ -24,6 +24,18 @@ export * from './lib/components/ws-data-list/ws-data-list.module';
 export * from './lib/directives/debounce-click/debounce-click.directive';
 export * from './lib/directives/debounce-click/debounce-click.module';
 
+///////////// Pipes
+export * from './lib/pipes/amount-string/amount-string.pipe';
+export * from './lib/pipes/amount-string/amount-string.module';
+export * from './lib/pipes/order-by/order-by.pipe';
+export * from './lib/pipes/order-by/order-by.module';
+export * from './lib/pipes/order-by-date/order-by-date.pipe';
+export * from './lib/pipes/order-by-date/order-by-date.module';
+export * from './lib/pipes/sort/sort.pipe';
+export * from './lib/pipes/sort/sort.module';
+export * from './lib/pipes/sort-date/sort-date.pipe';
+export * from './lib/pipes/sort-date/sort-date.module';
+
 ///////////// Entities
 export * from './lib/entities/ws-data-options';
 export * from './lib/entities/ws-data-list-options';
