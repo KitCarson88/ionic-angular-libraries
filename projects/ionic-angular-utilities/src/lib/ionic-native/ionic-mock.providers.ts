@@ -349,6 +349,18 @@ export class NativeStorageMock
             resolve({});
         });
     }
+
+    keys(): Promise<any>
+    {
+        return new Promise((resolve, reject) => {
+            let keys = [];
+
+            for (let i = 0; i < localStorage.length; ++i)
+                keys.push(localStorage.key(i));
+            
+            resolve(keys);
+        });
+    }
 }
 
 @Injectable()
