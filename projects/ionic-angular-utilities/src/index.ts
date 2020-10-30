@@ -27,6 +27,8 @@ export * from './lib/directives/debounce-click/debounce-click.module';
 ///////////// Pipes
 export * from './lib/pipes/amount-string/amount-string.pipe';
 export * from './lib/pipes/amount-string/amount-string.module';
+export * from './lib/pipes/capitalize/capitalize.pipe';
+export * from './lib/pipes/capitalize/capitalize.module';
 export * from './lib/pipes/order-by/order-by.pipe';
 export * from './lib/pipes/order-by/order-by.module';
 export * from './lib/pipes/order-by-date/order-by-date.pipe';
