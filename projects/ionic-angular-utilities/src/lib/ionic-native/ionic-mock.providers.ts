@@ -34,8 +34,8 @@ export class AdmobMock
 {
     setOptions(option: any): Promise<any>
     {
-        return new Promise((resolve, reject) => {
-            resolve();
+        return new Promise(resolve => {
+            resolve({});
         });
     }
 }
@@ -45,7 +45,7 @@ export class AndroidFullScreenMock
 {
     isImmersiveModeSupported(): Promise<void>
     {
-        return new Promise((resolve, rejcet) =>
+        return new Promise(resolve =>
         {
             resolve();
         });
@@ -53,7 +53,7 @@ export class AndroidFullScreenMock
 
     immersiveMode(): Promise<void>
     {
-        return new Promise((resolve, rejcet) =>
+        return new Promise(resolve =>
         {
             resolve();
         });
@@ -61,7 +61,7 @@ export class AndroidFullScreenMock
 
     leanMode(): Promise<void>
     {
-        return new Promise((resolve, rejcet) =>
+        return new Promise(resolve =>
         {
             resolve();
         });
@@ -141,43 +141,43 @@ export class DeviceMock extends Mock
 @Injectable()
 export class DiagnosticMock extends Mock{
     isCameraPresent(): Promise<any> {
-        return new Promise((resolve, reject) => {
+        return new Promise(resolve => {
             resolve(this.isMockAvailable('diagnostic') && this.config.ionicMock.diagnostic.isCameraPresent !== undefined && this.config.ionicMock.diagnostic.isCameraPresent !== null ? this.config.ionicMock.diagnostic.isCameraPresent : true);
         });
     }
 
     isCameraAuthorized(): Promise<any> {
-        return new Promise((resolve, reject) => {
+        return new Promise(resolve => {
             resolve(this.isMockAvailable('diagnostic') && this.config.ionicMock.diagnostic.isCameraAuthorized !== undefined && this.config.ionicMock.diagnostic.isCameraAuthorized !== null ? this.config.ionicMock.diagnostic.isCameraAuthorized : true);
         });
     }
 
     isLocationEnabled(): Promise<any> {
-        return new Promise((resolve, reject) => {
+        return new Promise(resolve => {
             resolve(this.isMockAvailable('diagnostic') && this.config.ionicMock.diagnostic.isLocationEnabled !== undefined && this.config.ionicMock.diagnostic.isLocationEnabled !== null ? this.config.ionicMock.diagnostic.isLocationEnabled : true);
         });
     }
 
     isLocationAvailable(): Promise<any> {
-        return new Promise((resolve, reject) => {
+        return new Promise(resolve => {
             resolve(this.isMockAvailable('diagnostic') && this.config.ionicMock.diagnostic.isLocationAvailable !== undefined && this.config.ionicMock.diagnostic.isLocationAvailable !== null ? this.config.ionicMock.diagnostic.isLocationAvailable : true);
         });
     }
 
     isLocationAuthorized(): Promise<any> {
-        return new Promise((resolve, reject) => {
+        return new Promise(resolve => {
             resolve(this.isMockAvailable('diagnostic') && this.config.ionicMock.diagnostic.isLocationAuthorized !== undefined && this.config.ionicMock.diagnostic.isLocationAuthorized !== null ? this.config.ionicMock.diagnostic.isLocationAuthorized : true);
         });
     }
 
     requestCameraAuthorization(): Promise<any> {
-        return new Promise((resolve, reject) => {
+        return new Promise(resolve => {
             resolve(this.isMockAvailable('diagnostic') && this.config.ionicMock.diagnostic.requestCameraAuthorization !== undefined && this.config.ionicMock.diagnostic.requestCameraAuthorization !== null ? this.config.ionicMock.diagnostic.requestCameraAuthorization : "mock granted");
         });
     }
 
     requestLocationAuthorization(): Promise<any> {
-        return new Promise((resolve, reject) => {
+        return new Promise(resolve => {
             resolve(this.isMockAvailable('diagnostic') && this.config.ionicMock.diagnostic.requestLocationAuthorization !== undefined && this.config.ionicMock.diagnostic.requestLocationAuthorization !== null ? this.config.ionicMock.diagnostic.requestLocationAuthorization : "mock granted");
         });
     }
@@ -281,41 +281,41 @@ export class NativeAudioMock
 {
     preloadSimple(id: string, path: string): Promise<any>
     {
-        return new Promise((resolve, reject) =>
+        return new Promise(resolve =>
         {
-            resolve();
+            resolve({});
         });
     }
 
     preloadComplex(id: string, path: string, volume: number, voices: number, delay: number): Promise<any>
     {
-        return new Promise((resolve, reject) =>
+        return new Promise(resolve =>
         {
-            resolve();
+            resolve({});
         });
     }
 
     play(id: string, callback?: Function): Promise<any>
     {
-        return new Promise((resolve, reject) =>
+        return new Promise(resolve =>
         {
-            resolve();
+            resolve({});
         });
     }
 
     loop(id: string): Promise<any>
     {
-        return new Promise((resolve, reject) =>
+        return new Promise(resolve =>
         {
-            resolve();
+            resolve({});
         });
     }
 
     stop(id: string): Promise<any>
     {
-        return new Promise((resolve, reject) =>
+        return new Promise(resolve =>
         {
-            resolve();
+            resolve({});
         });
     }
 }
@@ -326,7 +326,7 @@ export class NativeStorageMock
     setItem(reference: string, value: any): Promise<any>
     {
         localStorage.setItem(reference, value);
-        return new Promise((resolve, reject) =>
+        return new Promise(resolve =>
         {
             resolve({});
         });
@@ -335,7 +335,7 @@ export class NativeStorageMock
     getItem(reference: string): Promise<any>
     {
         let value = localStorage.getItem(reference);
-        return new Promise((resolve, reject) =>
+        return new Promise(resolve =>
         {
             resolve(value);
         });
@@ -344,7 +344,7 @@ export class NativeStorageMock
     remove(reference: string): Promise<any>
     {
         localStorage.removeItem(reference);
-        return new Promise((resolve, reject) =>
+        return new Promise(resolve =>
         {
             resolve({});
         });
@@ -352,7 +352,7 @@ export class NativeStorageMock
 
     keys(): Promise<any>
     {
-        return new Promise((resolve, reject) => {
+        return new Promise(resolve => {
             let keys = [];
 
             for (let i = 0; i < localStorage.length; ++i)
@@ -368,7 +368,7 @@ export class NavigationBarMock
 {
     setUp(autohide?): Promise<any>
     {
-        return new Promise((resolve, reject) =>
+        return new Promise(resolve =>
         {
             resolve({});
         });
@@ -376,7 +376,7 @@ export class NavigationBarMock
 
     hideNavigationBar(): Promise<any>
     {
-        return new Promise((resolve, reject) =>
+        return new Promise(resolve =>
         {
             resolve({});
         });
